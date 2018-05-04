@@ -3,7 +3,7 @@
 #define MAXSIZE 100                                     // 最大顶点数设为100
 
 
-// 有向图 -- 邻接矩阵
+// 有向图和无向图(通用) -- 邻接矩阵
 
 typedef struct {
     char vertices[MAXSIZE];                             // 存储顶点 信息
@@ -25,7 +25,7 @@ int main(void)
 
 void createGraph(MyGraph *pG)
 {
-    int i, j, k;
+    int i, j, k, type;
     char ch1, ch2;
     printf("请输入顶点数和边数(以空格隔开)：\n");
     scanf("%d %d", &pG->n, &pG->e);
@@ -38,23 +38,33 @@ void createGraph(MyGraph *pG)
     }
 
     // 对邻接矩阵 进行初始化
-    for (i = 0; i < pG->n; ++i)
+    for (i = 0; i < MAXSIZE; ++i)
     {
-        for (j = 0; j < pG->n; ++j)
+        for (j = 0; j < MAXSIZE; ++j)
         {
             pG->edges[i][j] = 0;
         }
     }
 
-    printf("请输入每条边对应的两个顶点(先输入弧尾，再输入弧头):\n");
+    printf("请输入图的类型：无向图(0)、有向图(1):");
+    scanf("%d", &type);
+
     for (k = 0; k < pG->e; ++k)
     {
         fflush(stdin);                                 // 刷新缓冲区
-        printf("请输入第%d条边的两个顶点标志(用逗号分隔):", k + 1);
+        printf("请输入第%d条边的两个顶点标志(用空格分隔):", k + 1);
         scanf("%c %c", &ch1, &ch2);
         for (i = 0; ch1 != pG->vertices[i]; ++i);
         for (j = 0; ch2 != pG->vertices[j]; ++j);
-        pG->edges[i][j] = 1;
+        if (type == 0)
+        {
+            // 如果是无向图 就在这里将pG->edges[i][j] 的对称元素 pG->edges[j][i] 也设为1
+            pG->edges[i][j] = pG->edges[j][i] = 1;
+        } else{
+            // 有向图
+            pG->edges[i][j] = 1;
+        }
+
     }
 }
 
