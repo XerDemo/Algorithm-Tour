@@ -33,7 +33,7 @@ void createGraph(MyGraph *pG)
     // 输入 顶点信息
     for (i = 0; i < pG->n; ++i)
     {
-        getchar();                                      // 用来接收 空格或回车
+        getchar();            // 第一次循环用来接收 scanf("%d %d", &pG->n, &pG->e)的空格和回车;  其它循环接收 scanf("%c", &pG->vertices[i]);的空格回车 
         scanf("%c", &pG->vertices[i]);
     }
 

@@ -47,7 +47,7 @@ void createGraph(ALGraph * pG)
     printf("请输入图的顶点信息；");
     for (i = 0; i < pG->n; ++i)
     {
-        getchar();                                  // 接收空格和回车
+        getchar();       // 第一次循环用来接收 scanf("%d %d", &pG->n, &pG->e)的空格和回车;  其它循环接收 scanf("%c", &pG->vertices[i]);的空格回车 
         scanf("%c", &(pG->adjlist[i].vertex));      // 输入顶点信息
         pG->adjlist[i].firstedges = NULL;           // 指向第一个边节点的指针置为 null
     }

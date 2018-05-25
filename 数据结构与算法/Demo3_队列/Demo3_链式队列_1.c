@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
+	 ¡¥ Ω∂”¡–£∫
+	 	 
+*/
 typedef struct node {
     int data;
     struct node *pNext;

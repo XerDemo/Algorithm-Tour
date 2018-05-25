@@ -45,6 +45,7 @@ void inOrderTraverse_1(BTNode * pT);                        // µİ¹éÖĞĞò±éÀú    ²
 void postOrderTraverse_1(BTNode * pT);                      // µİ¹éºóĞò±éÀú    ²»ÓÃ¶ÑÕ»
 int leafNum_1(BTNode * pT);                                 // µİ¹é ÇóÒ¶½Úµã¸öÊı
 
+
 void preOrderTraverse_2(BTNode * pT);                       // ·Çµİ¹é ÏÈĞò±éÀú Ê¹ÓÃ¶ÑÕ»
 void inOrderTraverse_2(BTNode * pT);                        // ·Çµİ¹é ÖĞĞò±éÀú Ê¹ÓÃ¶ÑÕ»
 //void postOrderTraverse_2(BTNode * pT);                    // ·Çµİ¹é ºóĞò±éÀú Ê¹ÓÃ¶ÑÕ»     Î´ÊµÏÖ
@@ -79,7 +80,7 @@ int main(void)
     printf("\n·Çµİ¹é²ã´Î±éÀú:");
     inOrderTraverse_2(pT);
 
-    printf("\n·Çµİ¹éÒ¶½ÚµãµÄ¸öÊı£º%d\n", leafNum_2(pT));
+//    printf("\n·Çµİ¹éÒ¶½ÚµãµÄ¸öÊı£º%d\n", leafNum_2(pT));
 
     return 0;
 }
