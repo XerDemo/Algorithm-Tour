@@ -84,7 +84,7 @@ BiTNode * createTree()
             exit(-1);
         }
         // 按 先序 DLR  根左右的顺序递归生成
-        pT->data = val;                              // 生成根节点
+        pT->data = val;                            // 生成根节点
         printf("请输入%d节点的左孩子：\n", pT->data);
         pT->pLChild = createTree();                // 生成该节点的左孩子
         printf("请输入%d节点的右孩子：\n", pT->data);
