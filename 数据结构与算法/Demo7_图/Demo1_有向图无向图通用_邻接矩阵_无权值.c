@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #define MAXSIZE 100                                     // 最大顶点数设为100
 
-
-// 有向图和无向图(通用) -- 邻接矩阵
+/*
+ 有向图和无向图(通用) -- 邻接矩阵
+ */ 
 
 typedef struct {
     char vertices[MAXSIZE];                             // 存储顶点 信息
@@ -23,6 +24,13 @@ int main(void)
     return 0;
 }
 
+/*
+ * 基本思想：
+ * 手动需要输入 顶点个数n 和 边数e  以及 每条边从哪个点到哪个点(弧尾 弧头)
+ * 定义两个字符变量 ch1:接受弧尾  ch2：接受弧头
+ * 在顶点数组中查询ch1 ch2所在位置 i j 并将对应在边集中的值edges[i][j] = 权重（无权重即为1）
+ * 如果是无向图 加上 edges[i][j] = 权重（无权重即为1）
+ */
 void createGraph(MyGraph *pG)
 {
     int i, j, k, type;

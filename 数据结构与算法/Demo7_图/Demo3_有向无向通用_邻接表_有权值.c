@@ -35,12 +35,10 @@ int main(void)
 void createGraph(ALGraph * pG)
 {
     int i, j, k, type;
-
     /********加上weight表示权值***********/
     int weight;
     /***************和不加权值的区别之处***************/
     char ch1, ch2;
-
     printf("请输入图的顶点个数和边数(空格隔开)：");
     scanf("%d %d", &pG->n, &pG->e);
 
