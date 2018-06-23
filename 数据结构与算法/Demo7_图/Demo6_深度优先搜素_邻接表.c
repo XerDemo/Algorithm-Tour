@@ -142,7 +142,7 @@ void DFS(ALGraph * pG, int i)
     // 以Vi为出发点对邻接表存储的图 pG进行DFS搜索
     printf("\t深度优先遍历结点：结点%c\n", pG->adjlist[i].vertex); // 打印顶点
     visited[i] = 1;
-
+    
     edgesNode * p = pG->adjlist[i].firstedges;
     while (p)
     {

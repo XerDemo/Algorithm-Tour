@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAXSIZE 8
+#define MAXSIZE 7
 
 
 void quickSort(int * arr, int left, int right);                         // øÏÀŸ≈≈–Ú
@@ -9,7 +9,7 @@ int partition(int arr[], int left, int right);                          // ∑µªÿ“
 int main()
 {
     int i;
-    int arr[MAXSIZE] = {70, 75, 69, 32, 88, 18, 16, 58};
+    int arr[MAXSIZE] = {53, 36, 48, 60, 7, 18, 72};
     quickSort(arr, 0, MAXSIZE - 1);
 
     printf("øÏÀŸ≈≈–Ú∫Û£∫\n");

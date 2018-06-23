@@ -121,6 +121,7 @@ path nextPath(path * p)
 {
     path newPath = *p;
     int flag = ++p->direct;
+    printf("-----%d--\n", flag);
     newPath.direct = 0;
     switch (flag)
     {
@@ -135,6 +136,9 @@ path nextPath(path * p)
             break;
         case 4:
             newPath.row = p->row - 1;
+            break;
+        default: 
+        printf("当前无此方向的探测！\n");
     }
     return newPath;
 
