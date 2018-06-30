@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAXSIZE 10                                       // 迷宫的 行数 列数
+#define MAXLEN 10                                       // 迷宫的 行数 列数
 /**缺点：不能计算所有能到终点的路线**/ 
 // 定义在迷宫中的位置
 typedef struct
@@ -14,7 +14,7 @@ typedef struct
 
 typedef struct stack
 {
-    path data[MAXSIZE * MAXSIZE];
+    path data[MAXLEN * MAXLEN];
     int top;
 } seqStack;
 
@@ -27,23 +27,14 @@ path pop(seqStack *pS);                       // 出栈
 
 void traverse(seqStack *pS);                            // 遍历
 path nextPath(path * p);
-
+void readMg(int mg[MAXLEN][MAXLEN]);
 int main(void)
 {
 
     seqStack *pS = createSeqStack();
-    int maze[MAXSIZE][MAXSIZE] = {             // -1：已经走过   0：此路不通   1：通
-            {0},
-            {0, 1, 1, 0, 1, 1, 1, 0, 1, 0},
-            {0, 1, 1, 0, 1, 1, 1, 0, 1, 0},
-            {0, 1, 1, 1, 1, 0, 0, 1, 1, 0},
-            {0, 1, 0, 0, 0, 1, 1, 1, 0, 0},
-            {0, 1, 1, 1, 0, 1, 1, 1, 0, 0},
-            {0, 1, 0, 1, 1, 1, 0, 1, 1, 0},
-            {0, 0, 0, 0, 0, 1, 0, 0, 1, 0},
-            {0, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-            {0}
-    };
+    int mg[MAXLEN][MAXLEN];             // -1：已经走过   0：此路不通   1：通
+    readMg(mg);
+           
     path begin = {1, 1, 0};                   // 迷宫入口
     path end = {8, 8, 0};                     // 迷宫出口
 
@@ -53,12 +44,12 @@ int main(void)
     {
         newCurrent = nextPath(&oldCurrent);
         // 当前方向可以走
-        if (maze[newCurrent.row][newCurrent.col] == 1)
+        if (mg[newCurrent.row][newCurrent.col] == 1)
         {
             // 将上一步走过的点 入栈
             push(pS, oldCurrent);
             // 将上一步走过的点 置为-1  表示走过  (防止之后兜圈子)
-            maze[oldCurrent.row][oldCurrent.col] = -1;
+            mg[oldCurrent.row][oldCurrent.col] = -1;
             // 如果 当前点已经到达出口  结束
             if (newCurrent.row == end.row && newCurrent.col == end.col)
             {
@@ -78,12 +69,12 @@ int main(void)
                 // 获取下一个点以及方向
                 newCurrent = nextPath(&oldCurrent);
                 // 如果此方向可以走
-                if (maze[newCurrent.row][newCurrent.col] == 1)
+                if (mg[newCurrent.row][newCurrent.col] == 1)
                 {
                     // 将上一步的点以及方向 入栈
                     push(pS, oldCurrent);
                     // 将上一步走过的点置为 -1  表示走过  防止兜圈
-                    maze[oldCurrent.row][oldCurrent.col] = -1;
+                    mg[oldCurrent.row][oldCurrent.col] = -1;
                     // 更新当前所在点
                     oldCurrent = newCurrent;
                     // 结束 寻找其他方向
@@ -101,7 +92,7 @@ int main(void)
             if (oldCurrent.direct >= 4)
             {
                 // 就算该点四个方向都走不通 也要把该点-1 表示来过
-                maze[oldCurrent.row][oldCurrent.col] = -1;
+                mg[oldCurrent.row][oldCurrent.col] = -1;
                 // oldCurrent 赋值为 无路可走的点 的前一步所在点
                 oldCurrent = pop(pS);
             }
@@ -115,6 +106,28 @@ int main(void)
 
 
     return 0;
+}
+
+void readMg(int mg[MAXLEN][MAXLEN])
+{
+	int x, y;
+    FILE *fl;
+    if ((fl = fopen("./map.txt", "rt")) == NULL) //// 从map.txt中读取
+    {
+        printf("\n该文件为空！");
+        getchar();
+        exit(1);
+    }
+    // 给迷宫 mg赋值 
+    for (x = 0; x < MAXLEN; ++x)
+    {
+        for (y = 0; y < MAXLEN; ++y)
+        {
+            fscanf(fl, "%c", &mg[x][y]);
+        }
+        fscanf(fl, "\n");
+    }
+    fclose(fl);
 }
 
 path nextPath(path * p)
@@ -143,7 +156,7 @@ path nextPath(path * p)
     return newPath;
 
 }
-//创建堆栈 初始化 当top等于-1时 表示栈空    top等于MAXSIZE-1时 表示栈满
+//创建堆栈 初始化 当top等于-1时 表示栈空    top等于MAXLEN-1时 表示栈满
 seqStack *createSeqStack()
 {
     seqStack *pS = (seqStack *) malloc(sizeof(seqStack));
@@ -163,7 +176,7 @@ int emptySeqStack(seqStack *pS)
 
 int fullSeqStack(seqStack *pS)
 {
-    return MAXSIZE*MAXSIZE - 1 == pS->top;
+    return MAXLEN*MAXLEN - 1 == pS->top;
 }
 
 //在执行push操作时，首先看栈是否满 ;若不满则top+1 ，并将新元素放入data数组的top位置

@@ -13,7 +13,7 @@
 
 typedef struct queue{
     Node data[MAXSIZE];
-    int front;								//  队头指针  始终指向对头元素的前一个位置
+    int front;								//  队头指针  始终指向队头元素的前一个位置
     int rear;								//  队尾指针  始终指向队尾最后一个元素
 }cycleQueue;
 
@@ -94,23 +94,6 @@ int lengthQueue(cycleQueue * pQ)
     return (pQ->rear - pQ->front + MAXSIZE ) % MAXSIZE;
 }
 
-// 遍历队列 
-void traverseQueue(cycleQueue * pQ)
-{
-    if (isEmptyQueue(pQ))
-    {
-        printf("cycleQueue is empty! traverse_queue is exit!");
-        return;
-    }
-    int i = pQ->front;
-    printf("cycleQueue is : ");
-    while (i != pQ->rear)
-    {
-        i = (i+1) % MAXSIZE ;
-        printf(" %d  ", pQ->data[i]);
-    }
-    printf("\n");
-}
 
 #endif //PROGRAM_CIRQUEUE_H
 

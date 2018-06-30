@@ -62,23 +62,5 @@ Node pop(LinkStack *pS)
 
 }
 
-// ±éÀúÁ´Õ»
-void traverseStack(LinkStack *pS)
-{
-    if (isEmpty(pS))
-    {
-        printf("linkStack is empty! traverseStack is failed\n");
-        return;
-    }
-    stackNode *p = pS->pTop;
-    printf("path:\n");
-    while (p)
-    {
-        printf("< %d %d %d >\n", p->data.rowNo, p->data.colNo);
-        p = p->pNext;
-    }
-    printf("\n");
-}
-
 
 

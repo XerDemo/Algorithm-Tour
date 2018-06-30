@@ -11,16 +11,10 @@ typedef struct node{
     // int direction;                           // 我去掉了这个 方便统一 DFS BFS遍历下个方向  我使用了另外一种方法 
 } Node;
 
-
-
-
-
 const char ROAD = '*';                          // 路： 可以走
 const char WALL = '#';                          // 墙： 不能走
 char maze[MAXLEN][MAXLEN];                      // 定义迷宫
 int visited[MAXLEN][MAXLEN];                    // 访问数组 1：走过  0：没有走过
-
-
 
 int entranceX = 1, entranceY = 1;               // 入口(1,1)
 int exitX = MAXLEN - 2, exitY = MAXLEN - 2;     // 出口(8,8)

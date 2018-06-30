@@ -32,6 +32,9 @@ int main(void)
     inQueue(pQ,2);
     inQueue(pQ,3);
     printf("出队元素：%d\n", outQueue(pQ));
+     printf("出队元素：%d\n", outQueue(pQ));
+      printf("出队元素：%d\n", outQueue(pQ));
+
     inQueue(pQ,4);
     printf("队列长度：%d\n", pQ->count);
     traverseQueue(pQ);
