@@ -25,6 +25,9 @@ void preOrderTraverse(BiTNode * pT);         // 先序遍历
 void inOrderTraverse(BiTNode * pT);          // 中序遍历
 void postOrderTraverse(BiTNode * pT);        // 后序遍历
 void levelOrderTraverse(BiTNode * pT);       // 层次遍历  借助于 队列来实现
+
+void levelOrderTraverse_1(BiTNode * pT);     // 层次遍历  用数组模拟 顺序队列   
+
 int leafNum(BiTNode * pT);                   // 求叶节点个数   递归
 int nodeNum(BiTNode * pT);                   // 统计节点总数
 int treeDepth(BiTNode * pT);                 // 求二叉树的深度
@@ -51,6 +54,9 @@ int main(void)
 
     printf("\n层次遍历: ");
     levelOrderTraverse(pT);
+    
+    printf("\n数组模拟层次：");
+	levelOrderTraverse_1(pT);
     printf("\n");
 
     printf("叶节点个数:%d\n", leafNum(pT));
@@ -81,7 +87,7 @@ BiTNode * createTree()
         if (!pT)
         {
             printf("malloc is failed!\n");
-            exit(-1);
+            exit(0);
         }
         // 按 先序 DLR  根左右的顺序递归生成
         pT->data = val;                            // 生成根节点
@@ -152,6 +158,38 @@ void levelOrderTraverse(BiTNode * pT)
         }
     }
 }
+
+// 数组模拟顺序队列 实现 层次遍历
+void levelOrderTraverse_1(BiTNode * pT)
+{
+	int front, rear;                // 队头  队尾
+    BiTNode *arr[100];              // 数组模拟队列
+    BiTNode *p = pT;
+    // 只要树不空
+    if (p)
+    {
+        front = 0;
+        arr[front] = p;            // 根节点入队
+        rear = 1;
+    }
+    // 只要队列不空
+    while (front != rear)
+    {
+        p = arr[front];
+
+        front++;                   // 跟结点出队
+        printf("%d  ", p->data);    // 打印根节点
+
+        if (p->pLChild)            // 如果左孩子不空 入队 rear后移
+        {
+            arr[rear++] = p->pLChild;
+        }
+        if (p->pRChild)            // 如果左孩子不空 入队 rear后移
+        {
+            arr[rear++] = p->pRChild;
+        }
+    }
+} 
 
 // 就是在递归先序遍历的基础上 加了一个判断条件而已
 int leafNum(BiTNode * pT)
