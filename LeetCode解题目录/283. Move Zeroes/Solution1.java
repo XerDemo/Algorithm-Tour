@@ -2,15 +2,15 @@ import java.util.Arrays;
 public class Solution1 {
 	// 时间复杂度 O(N)   空间复杂度O(1)    双指针
 	public static void moveZeroes(int[] nums) {
-		int left = 0; 		// [left,right) 存放 非零元素
-		for (int right = 0; right < nums.length; ++right) {
-			if (0 != nums[right]) {
-				nums[left++] = nums[right];
+		int slow = 0; 		// nums中, [0...slow)的元素均为非0元素
+		for (int fast = 0; fast < nums.length; ++fast) {
+			if (0 != nums[fast]) {
+				nums[slow++] = nums[fast];
 			}
 		}
 		
-		// [right , nums.length) 存放0
-		for (int i = left; i < nums.length; ++i) {
+		// [slow , nums.length) 存放0
+		for (int i = slow; i < nums.length; ++i) {
 			nums[i] = 0;
 		}
 	}

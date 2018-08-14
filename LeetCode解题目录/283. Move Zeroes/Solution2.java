@@ -9,10 +9,10 @@ public class Solution2 {
 	
 	// 时间复杂度 O(N) 空间复杂度O(1) 双指针
 	public static void moveZeroes(int[] nums) {
-		int left = 0; 
-		for (int right = 0; right < nums.length; ++right) {
-			if (0 != nums[right]) {
-				swap(nums, left++, right);
+		int slow = 0; 
+		for (int fast = 0; fast < nums.length; ++fast) {
+			if (0 != nums[fast]) {
+				swap(nums, slow++, fast);
 			}
 		}
 	}
