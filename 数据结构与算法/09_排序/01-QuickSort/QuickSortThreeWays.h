@@ -18,7 +18,7 @@ void __QuickSortThreeWays(int *arr, int left, int right)
 
     lt = left;           // 将初始lt代入 [left+1...lt] < v  刚好使这个区间无效
     gt = right + 1;      // 同理 gt代入  [gt...right] >v
-    i = left;            // 同理i代入    [lt+1...i-1] == v
+    i = left + 1;        // 同理i代入    [lt+1...i-1] == v
 
     // i和gt还没遇上
     while (i < gt)
@@ -40,8 +40,8 @@ void __QuickSortThreeWays(int *arr, int left, int right)
         }
     }
     // 此时i和gt已经遇上了
-    swap(&arr[left], &arr[lt]);
-    __QuickSortThreeWays(arr, left, lt - 1);  // 交换的时候lt的位置没-1 现在-1
+    swap(&arr[left], &arr[lt--]);
+    __QuickSortThreeWays(arr, left, lt);  
     __QuickSortThreeWays(arr, gt, right);
 }
 
