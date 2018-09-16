@@ -5,10 +5,17 @@ import java.util.List;
 public class Solution2 {
     // 时间复杂度O(Nlog2^N) + O(N^2)      排序 + 双指针
     // 优化Solution1  不需要set去重 直接在找的时候重复元素不添加到res中
+    // 选取的三个元素 索引从左到右  分别为 i 、left 、right(nums[i] <= nums[left] <= nums[rigt])
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
-        Arrays.sort(nums);
+        Arrays.sort(nums);                               // 先将数组按从小到大排序
         for (int i = 0; i < nums.length - 2; ++i) {
+            if (nums[i] > 0) {                           // 最小的元素都大于0 结束
+                break;
+            }
+            if (nums[i] + nums[nums.length-1] + nums[nums.length-2] < 0) {   // 说明第一个元素nums[i]太小了
+                continue;
+            }
             if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {      // 防止res中有重复的结果
                 int left = i + 1;
                 int right = nums.length - 1;
