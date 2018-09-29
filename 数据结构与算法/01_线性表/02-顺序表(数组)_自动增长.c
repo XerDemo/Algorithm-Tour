@@ -11,7 +11,7 @@ typedef struct
 {
     int *data;                                        // 数组空间基址
     int maxsize;                                      // 数组大小
-    int last;                                          // 指向数组最后一个元素的下标  初始时为空：-1  有一个元素：0 以此类推
+    int last;                                         // 指向数组最后一个元素的下标  初始时为空：-1  有一个元素：0 以此类推
 } seqList;
 
 

@@ -27,6 +27,7 @@ int insertLinkList_2(LinkNode *pHead, int pos, int val);   // 插入  其实就是将se
 int deleteLinkList_1(LinkNode *pHead, int pos, int *pVal); // 删除  配合 searchLinkList使用
 int deleteLinkList_2(LinkNode *pHead, int pos, int *pVal); // 删除  其实就是将searchLinkList + deleteLinkList_1结合
 int deleteLinkList_3(LinkNode *pHead, int val);            // 删除  根据 元素的值 来删除
+LinkNode * reverseList(LinkNode * pHead);                    // 翻转带头节点的链表 
 
 int main(void)
 {
@@ -238,6 +239,22 @@ int deleteLinkList_3(LinkNode *pHead, int val)
         return 1;
     }
 
+}
+ 
+// 翻转链表 时间复杂度O(N)
+LinkNode * reverseList(LinkNode * pHead)
+{
+	LinkNode * pre = NULL;
+	LinkNode * cur = pHead->pNext;
+	while (cur)
+	{
+		LinkNode * rear = cur->pNext;
+		cur->pNext = pre;
+		pre = cur;
+		cur = rear;
+	}
+	pHead->pNext = pre;
+	return pHead;
 }
 
 void traverse(LinkNode *pHead)
