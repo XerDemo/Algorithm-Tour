@@ -18,7 +18,7 @@ LinkNode *createList(int arr[], int n) {
     LinkNode *head = (LinkNode *) malloc(sizeof(LinkNode));
     head->val = arr[0];
     LinkNode *curNode = head;
-	curNode->next = NULL;
+    curNode->next = NULL;
     int i;
     for (i = 1; i < n; ++i) {
         LinkNode *newNode = (LinkNode *) malloc(sizeof(LinkNode));
