@@ -1,17 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define INITSIZE 10 // æ•°ç»„åˆå§‹å®¹é‡
+#define INITSIZE 10 // Êı×é³õÊ¼ÈİÁ¿
 #define E int
 
+/*
+// ¾²Ì¬Êı×é½Úµã¶¨Òå
 typedef struct {
-    E * data;      // åŠ¨æ€åˆ†é…æ•°ç»„çš„ç©ºé—´åŸºå€
-    int capacity;  // æ•°ç»„çš„æœ€å¤§å®¹é‡
-    int size;      // æ•°ç»„å…ƒç´ å½“å‰æ‰€å å®¹é‡ size:0 è¡¨ç¤ºæ•°ç»„ç©º
-                   // æœ‰çš„æ•™ææ˜¯int lastæŒ‡å‘æ•°ç»„æœ€åä¸€ä¸ªå…ƒç´ çš„ä¸‹æ ‡  åˆå§‹æ—¶ä¸ºç©ºï¼šlast = -1 ä¸¤ä¸ªåŸç†ä¸€è‡´
+    E data[INITSIZE];  // Êı×é³¤¶ÈÎª¹Ì¶¨³¤¶È
+    int size;
+}Array;
+*/
+
+// ¶¯Ì¬Êı×é½Úµã¶¨Òå
+typedef struct {
+    E * data;      // ¶¯Ì¬·ÖÅäÊı×éµÄ¿Õ¼ä»ùÖ·
+    int capacity;  // Êı×éµÄ×î´óÈİÁ¿
+    int size;      // Êı×éÔªËØµ±Ç°ËùÕ¼ÈİÁ¿ size:0 ±íÊ¾Êı×é¿Õ
+                   // ÓĞµÄ½Ì²ÄÊÇint lastÖ¸ÏòÊı×é×îºóÒ»¸öÔªËØµÄÏÂ±ê  ³õÊ¼Ê±Îª¿Õ£ºlast = -1 Á½¸öÔ­ÀíÒ»ÖÂ
 }Array;
 
 
-// åˆå§‹åŒ–åŠ¨æ€æ•°ç»„
+// ³õÊ¼»¯¶¯Ì¬Êı×é
 Array * initArray(){
     Array *arr = (Array *) malloc(sizeof(Array));
     arr->data = (E *) malloc(sizeof(E) * INITSIZE);
@@ -19,24 +28,24 @@ Array * initArray(){
     arr->size = 0;
 }
 
-// è·å–æ•°ç»„çš„å®¹é‡   O(1)
+// »ñÈ¡Êı×éµÄÈİÁ¿   O(1)
 int getCapacity(Array * arr){
     return arr->capacity;
 }
 
-// è·å–æ•°ç»„ä¸­çš„å…ƒç´ ä¸ªæ•°  O(1)
+// »ñÈ¡Êı×éÖĞµÄÔªËØ¸öÊı  O(1)
 int getSize(Array * arr){
     return arr->size;
 }
 
-// è¿”å›æ•°ç»„æ˜¯å¦ä¸ºç©º O(1)
+// ·µ»ØÊı×éÊÇ·ñÎª¿Õ O(1)
 int isEmpty(Array * arr){
     return arr->size;
 }
 
-// å°†æ•°ç»„ç©ºé—´çš„å®¹é‡æ‰©å®¹æˆnewCapacityå¤§å° O(N)
+// ½«Êı×é¿Õ¼äµÄÈİÁ¿À©Èİ³ÉnewCapacity´óĞ¡ O(N)
 void resize(Array * arr,int newCapacity){
-    E *newDate = (E *) malloc(sizeof(E) * newCapacity); // æ­¤å¤„å¯ä»¥ä½¿ç”¨realloc
+    E *newDate = (E *) malloc(sizeof(E) * newCapacity); // ´Ë´¦¿ÉÒÔÊ¹ÓÃrealloc
     int i;
     for (i = 0; i < arr->size; ++i) {
         newDate[i] = arr->data[i];
@@ -45,12 +54,13 @@ void resize(Array * arr,int newCapacity){
     arr->capacity = newCapacity;
 }
 
-// åœ¨indexç´¢å¼•çš„ä½ç½®æ’å…¥ä¸€ä¸ªæ–°å…ƒç´ e   indexâˆˆ[0,size]  O(N)
+// ÔÚindexË÷ÒıµÄÎ»ÖÃ²åÈëÒ»¸öĞÂÔªËØe   index¡Ê[0,size]  O(N)
 void add(Array * arr,int index, E e){
-    if (index < 0 || index > arr->size) { // indexä½ç½®ä¸åˆæ³•
+    if (index < 0 || index > arr->size) { // indexÎ»ÖÃ²»ºÏ·¨
         printf("Add failed. Require index [0,size].");
+        return;
     }
-    if (arr->size == arr->capacity){ // æ•°ç»„æ»¡ åŠ¨æ€å¢é•¿æ•°ç»„
+    if (arr->size == arr->capacity){ // Êı×éÂú ¶¯Ì¬Ôö³¤Êı×é
         resize(arr, 2 * arr->capacity);
     }
     int i;
@@ -61,33 +71,35 @@ void add(Array * arr,int index, E e){
     arr->size++;
 }
 
-// å‘æ‰€æœ‰å…ƒç´ åæ·»åŠ ä¸€ä¸ªæ–°å…ƒç´    O(1)
+// ÏòËùÓĞÔªËØºóÌí¼ÓÒ»¸öĞÂÔªËØ   O(1)
 void addLast(Array * arr,E e){
     add(arr, arr->size, e);
 }
 
-// åœ¨æ‰€æœ‰å…ƒç´ å‰æ·»åŠ ä¸€ä¸ªæ–°å…ƒç´    O(N)
+// ÔÚËùÓĞÔªËØÇ°Ìí¼ÓÒ»¸öĞÂÔªËØ   O(N)
 void addFirst(Array * arr,E e){
     add(arr, 0, e);
 }
 
-// è·å–indexç´¢å¼•ä½ç½®çš„å…ƒç´  O(1)
+// »ñÈ¡indexË÷ÒıÎ»ÖÃµÄÔªËØ O(1)
 E get(Array * arr,int index){
     if (index < 0 || index >= arr->size) {
-        printf("Get failed. Index âˆˆ [0,size).");
+        printf("Get failed. Index ¡Ê [0,size).");
+        return -9999999;
     }
     return arr->data[index];
 }
 
-// ä¿®æ”¹indexç´¢å¼•ä½ç½®çš„å…ƒç´ ä¸ºe O(1)
+// ĞŞ¸ÄindexË÷ÒıÎ»ÖÃµÄÔªËØÎªe O(1)
 void set(Array * arr,int index, E e){
-    if (index < 0 || index > arr->size) { // indexâˆˆ[0,size)
-        printf("Set failed. Index âˆˆ [0,size).");
+    if (index < 0 || index > arr->size) { // index¡Ê[0,size)
+        printf("Set failed. Index ¡Ê [0,size).");
+        return;
     }
     arr->data[index] = e;
 }
 
-// æŸ¥æ‰¾æ•°ç»„ä¸­æ˜¯å¦æœ‰å…ƒç´ e  O(N)
+// ²éÕÒÊı×éÖĞÊÇ·ñÓĞÔªËØe  O(N)
 int contains(Array * arr,E e){
     int i;
     for (i = 0; i < arr->size; ++i) {
@@ -98,7 +110,7 @@ int contains(Array * arr,E e){
     return 0;
 }
 
-// æŸ¥æ‰¾æ•°ç»„ä¸­å…ƒç´ eæ‰€åœ¨çš„ç´¢å¼•ï¼Œå¦‚æœä¸å­˜åœ¨å…ƒç´ eï¼Œåˆ™è¿”å›-1  O(N)
+// ²éÕÒÊı×éÖĞÔªËØeËùÔÚµÄË÷Òı£¬Èç¹û²»´æÔÚÔªËØe£¬Ôò·µ»Ø-1  O(N)
 int find(Array * arr,E e){
     int i;
     for (i = 0; i < arr->size; ++i) {
@@ -109,10 +121,11 @@ int find(Array * arr,E e){
     return -1;
 }
 
-// ä»æ•°ç»„ä¸­åˆ é™¤indexä½ç½®çš„å…ƒç´ , è¿”å›åˆ é™¤çš„å…ƒç´    O(N)
+// ´ÓÊı×éÖĞÉ¾³ıindexÎ»ÖÃµÄÔªËØ, ·µ»ØÉ¾³ıµÄÔªËØ   O(N)
 E Remove(Array * arr,int index){
-    if (index < 0 || index >= arr->size) { // index âˆˆ[0,size)
-        printf("Remove failed. Index âˆˆ [0,size).");
+    if (index < 0 || index >= arr->size) { // index ¡Ê[0,size)
+        printf("Remove failed. Index ¡Ê [0,size).");
+        return -9999999;
     }
     E res = arr->data[index];
     int i;
@@ -120,24 +133,24 @@ E Remove(Array * arr,int index){
         arr->data[i-1] = arr->data[i];
     }
     arr->size--;
-    // åŠ¨æ€ç¼©å‡æ•°ç»„ æ›´å¥½çš„å†™æ³•ï¼šarr->size == arr->capacity / 4 && arr->capacity / 2 !=0
+    // ¶¯Ì¬Ëõ¼õÊı×é ¸üºÃµÄĞ´·¨£ºarr->size == arr->capacity / 4 && arr->capacity / 2 !=0
     if (arr->size == arr->capacity / 2) {
         resize(arr, arr->capacity / 2);
     }
     return res;
 }
 
-// ä»æ•°ç»„ä¸­åˆ é™¤ç¬¬ä¸€ä¸ªå…ƒç´ , è¿”å›åˆ é™¤çš„å…ƒç´    O(N)
+// ´ÓÊı×éÖĞÉ¾³ıµÚÒ»¸öÔªËØ, ·µ»ØÉ¾³ıµÄÔªËØ   O(N)
 E removeFirst(Array * arr){
     return Remove(arr, 0);
 }
 
-// ä»æ•°ç»„ä¸­åˆ é™¤æœ€åä¸€ä¸ªå…ƒç´ , è¿”å›åˆ é™¤çš„å…ƒç´   O(1)
+// ´ÓÊı×éÖĞÉ¾³ı×îºóÒ»¸öÔªËØ, ·µ»ØÉ¾³ıµÄÔªËØ  O(1)
 E removeLast(Array * arr){
     return Remove(arr, arr->size - 1);
 }
 
-// ä»æ•°ç»„ä¸­åˆ é™¤å…ƒç´ e   O(N)
+// ´ÓÊı×éÖĞÉ¾³ıÔªËØe   O(N)
 void removeElement(Array * arr,E e){
     int index = find(arr, e);
     if (index != -1) {
@@ -145,7 +158,7 @@ void removeElement(Array * arr,E e){
     }
 }
 
-// æ‰“å°æ•°ç»„ä¿¡æ¯
+// ´òÓ¡Êı×éĞÅÏ¢
 void printMessage(Array * arr){
     printf("Array:size = %d  , capacity = %d \n",arr->size,arr->capacity);
     int i;
@@ -159,8 +172,16 @@ void printMessage(Array * arr){
     printf("]\n");
 }
 
+/**
+ *  »ùÓÚÊı×éÊµÏÖµÄÕ»ºÍ¶ÓÁĞ¶¼ÊÇ Êı×é²Ù×÷µÄ×Ó¼¯
+ *  Õ»(Êı×é)£ºaddLast() ÈëÕ» O(1); removeLast() ³öÕ» O(1); get(index:size-1)¶ÁÕ»¶¥ÔªËØO(1)
+ *  ¶ÓÁĞ(Êı×é)£ºaddLast() Èë¶Ó O(1); removeFirst() ³ö¶Ó o(N) ; get(index:0) ¶Á¶ÓÍ·ÔªËØ O(1)£»get(index:size-1) ¶È¶ÓÎ²ÔªËØO(1)
+ *           ÒòÎª³ö¶ÓÊÇO(N) ÓÚÊÇ¼ÓÈë¶ÓÎ²Ö¸Õë²¢½øĞĞ¶ÔÓ¦µÄ¸Ä±ä Ê¹³ö¶Ó±ä³ÉO(1)
+ */
+
 int main(void){
     Array *arr = initArray();
+    Remove(arr,0);
     printMessage(arr);
     int i;
     for (i = 0; i < 10; i++) {
