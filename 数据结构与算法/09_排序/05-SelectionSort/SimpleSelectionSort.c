@@ -7,16 +7,18 @@
 void selectionSort(int * arr, int n)
 {
     int i, j;
-    for (i = 0; i < n-1; ++i)       // 寻找最小元素
+    for (i = 0; i < n; ++i)      // n-1趟
     {
         int minIndex = i;
         for (j = i+1; j < n; ++j)
         {
-            if (arr[j] > arr[minIndex])  // 如果有元素比arr[minIndex]小 交换位置
-            {
-                swap(&arr[j], &arr[minIndex]);
-            }
+            if (arr[j] < arr[minIndex]) { 
+				minIndex = j; // 更新
+			}
         }
+		if (minIndex != i) {
+			swap(arr[minIndex], arr[i]);
+		}
     }
 }
 

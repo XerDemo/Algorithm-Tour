@@ -4,6 +4,7 @@
 #include "SortHelper.h"
 
 // 将arr[left ... right] 进行归并操作
+// arr[left,mid]   arr[mid+1, right]各自有序 对其进行归并操作
 void __merge1(int *arr, int left, int mid, int right)
 {
     int i, j, k;

@@ -27,11 +27,11 @@ myGraph *createGraph()
     char ch1, ch2;
 
     myGraph *pG = (myGraph *) malloc(sizeof(myGraph));
-    if (!pG)
-    {
-        printf("malloc is failed!");
-        exit(-1);
-    }
+//    if (!pG)
+//    {
+//        printf("malloc is failed!");
+//        exit(-1);
+//    }
     printf("请输入顶点数：");
     scanf("%d", &pG->n);
     printf("请输入边数:");

@@ -16,13 +16,15 @@ int __partitionTwoWays(int *arr, int left, int right)
     while (1)
     {
         // i 从左向右扫描 遇到比基准小的元素 i++
-        while (i <= right && arr[i] < v)
+        // 注意这里的边界, arr[i] < v, 不能是arr[i] <= v    思考一下为什么?
+        while (i <= right && arr[i] < v)        // 写成i <= j 也可以
         {
             i++;
         }
 
         // j 从右向左扫描 遇到比基准大的元素 j--
-        while (j >= left + 1 && arr[j] > v)
+		// 注意这里的边界, arr[j] > v, 不能是arr[j] >= v 思考？
+        while (j >= left + 1 && arr[j] > v)     // 写成j >= i 也可以
         {
             j--;
         }
@@ -36,8 +38,15 @@ int __partitionTwoWays(int *arr, int left, int right)
         i++;
         j--;
     }
-    swap(&arr[left], &arr[j]);          // 把基准放到 排好序应该在的位置
+    swap(&arr[left], &arr[j]);          // 把基准放到 排好序应该在的位置 注意是与j交换不是i 画图体会
     return j;
+	
+/*
+	比如数组 1,0,0, ..., 0, 0
+	a. 对于arr[i]<v和arr[j]>v的方式，第一次partition得到的分点是数组中间；
+	b. 对于arr[i]<=v和arr[j]>=v的方式，第一次partition得到的分点是数组的倒数第二个。
+	这是因为对于连续出现相等的情况，a方式会交换i和j的值；而b方式则会将连续出现的这些值归为其中一方，使得两棵子树不平衡
+*/
 }
 
 // 对arr[left, right]进行快速排序

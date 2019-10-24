@@ -23,14 +23,14 @@ int main(void)
     int i;
     double sum = 0;
 
-//    for (i = 0; i < 20; ++i)
-//    {
-//        sum += seqFindMinitor();
-//    }
-//    printf("带哨兵总共花费：%f s\n", sum);
-//    printf("带哨兵平均花费：%f s\n", sum / 30);
+    for (i = 0; i < 20; ++i)
+    {
+        sum += seqFindMinitor();
+    }
+    printf("带哨兵总共花费：%f s\n", sum);
+    printf("带哨兵平均花费：%f s\n", sum / 30);
 
-
+	sum = 0; 
     for (i = 0; i < 20; ++i)
     {
         sum += seqFind();
