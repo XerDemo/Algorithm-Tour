@@ -3,38 +3,38 @@
 #include <iostream>
 #include <memory.h>
 
-#define MAXSIZE 10                                  // æœ€å¤§é¡¶ç‚¹æ•° 10
-#define INFINITY 9999                               // æ— ç©·å¤§
+#define MAXSIZE 10                                  // ×î´ó¶¥µãÊı 10
+#define INFINITY 9999                               // ÎŞÇî´ó
 
 using namespace std;
 
 typedef struct {
-    char vexs[MAXSIZE];                         // å­˜æ”¾é¡¶ç‚¹å…ƒç´ 
-    int edges[MAXSIZE][MAXSIZE];                // é‚»æ¥çŸ©é˜µ å­˜æ”¾è¾¹ä¸è¾¹ä¹‹é—´çš„å…³ç³»
-    int n;                                      // é¡¶ç‚¹æ•°
-    int e;                                      // è¾¹æ•°
+    char vexs[MAXSIZE];                         // ´æ·Å¶¥µãÔªËØ
+    int edges[MAXSIZE][MAXSIZE];                // ÁÚ½Ó¾ØÕó ´æ·Å±ßÓë±ßÖ®¼äµÄ¹ØÏµ
+    int n;                                      // ¶¥µãÊı
+    int e;                                      // ±ßÊı
 } myGraph;
 
-bool visit[MAXSIZE];  // visit[i] = true è¡¨ç¤ºé¡¶ç‚¹viè¢«è®¿é—®
-int dist[MAXSIZE];    // dist[i]:è®°å½•é¡¶ç‚¹viçš„æœ€çŸ­è·ç¦»
-int path[MAXSIZE];    // è®°å½•æœ€çŸ­è·¯å¾„
+bool visit[MAXSIZE];  // visit[i] = true ±íÊ¾¶¥µãvi±»·ÃÎÊ
+int dist[MAXSIZE];    // dist[i]:¼ÇÂ¼¶¥µãviµÄ×î¶Ì¾àÀë
+int path[MAXSIZE];    // ¼ÇÂ¼×î¶ÌÂ·¾¶
 
 int dp[MAXSIZE][MAXSIZE];
 int pathDp[MAXSIZE][MAXSIZE];
 
-int lowcost[MAXSIZE]; // lowcost[i]è®°å½•é¡¶ç‚¹iåˆ°ç›®å‰æœ€å°ç”Ÿæˆæ ‘è¾¹ä¸Šçš„æœ€å°æƒå€¼
+int lowcost[MAXSIZE]; // lowcost[i]¼ÇÂ¼¶¥µãiµ½Ä¿Ç°×îĞ¡Éú³ÉÊ÷±ßÉÏµÄ×îĞ¡È¨Öµ
 
-myGraph *createGraph();                        // åˆ›å»ºå›¾
-void showGraph(myGraph *pG);                   // æ‰“å°é‚»æ¥çŸ©é˜µ
+myGraph *createGraph();                        // ´´½¨Í¼
+void showGraph(myGraph *pG);                   // ´òÓ¡ÁÚ½Ó¾ØÕó
 void BFS(myGraph *pG, int i);                      // bfs
-void dfs_1(myGraph *pG, int i);                    // DFS é€’å½’
-void dfs_2(myGraph *pG, int i);                    // DFS æ ˆ
-void Dijkstra(myGraph *pG, int i);     // Dijkstraæ±‚æœ‰æƒå›¾çš„æœ€çŸ­è·¯å¾„ åªèƒ½æ‰“å°ä»æºç‚¹viåˆ°vjçš„è·¯å¾„ï¼Œä¸èƒ½æ‰“å°éæºç‚¹åˆ°vjçš„è·¯å¾„
-void BFS_minPath(myGraph *pG, int i);              // BFSæ±‚æ— æƒå›¾çš„æœ€çŸ­è·¯å¾„ï¼Œåªèƒ½æ‰“å°ä»æºç‚¹viåˆ°vjçš„è·¯å¾„ï¼Œä¸èƒ½æ‰“å°éæºç‚¹åˆ°vjçš„è·¯å¾„
+void dfs_1(myGraph *pG, int i);                    // DFS µİ¹é
+void dfs_2(myGraph *pG, int i);                    // DFS Õ»
+void Dijkstra(myGraph *pG, int i);     // DijkstraÇóÓĞÈ¨Í¼µÄ×î¶ÌÂ·¾¶ Ö»ÄÜ´òÓ¡´ÓÔ´µãviµ½vjµÄÂ·¾¶£¬²»ÄÜ´òÓ¡·ÇÔ´µãµ½vjµÄÂ·¾¶
+void BFS_minPath(myGraph *pG, int i);              // BFSÇóÎŞÈ¨Í¼µÄ×î¶ÌÂ·¾¶£¬Ö»ÄÜ´òÓ¡´ÓÔ´µãviµ½vjµÄÂ·¾¶£¬²»ÄÜ´òÓ¡·ÇÔ´µãµ½vjµÄÂ·¾¶
 void printPath(myGraph *pG, int path[], int i, int j);
 void floyd(myGraph *pG);                           // floyd
-void printPathDp(myGraph * pG,int i, int j);  // æ‰“å°floydçš„è·¯å¾„
-void prim(myGraph *pG, int v,int &sum);      // æ±‚æœ€å°ç”Ÿæˆæ ‘çš„ä»£ä»·
+void printPathDp(myGraph * pG,int i, int j);  // ´òÓ¡floydµÄÂ·¾¶
+void prim(myGraph *pG, int v,int &sum);      // Çó×îĞ¡Éú³ÉÊ÷µÄ´ú¼Û
 
 
 int main(void) {
@@ -43,31 +43,31 @@ int main(void) {
 
     // BFS
     cout << "bfs: ";
-    for (int i = 0; i < MAXSIZE; ++i) {  // è®¿é—®æ•°ç»„åˆå§‹åŒ–
+    for (int i = 0; i < MAXSIZE; ++i) {  // ·ÃÎÊÊı×é³õÊ¼»¯
         visit[i] = false;
     }
     BFS(pG, 0);
 
-    // DFS é€’å½’
+    // DFS µİ¹é
     printf("\nDFS1: ");
-    for (int i = 0; i < MAXSIZE; ++i) {  // è®¿é—®æ•°ç»„åˆå§‹åŒ–
+    for (int i = 0; i < MAXSIZE; ++i) {  // ·ÃÎÊÊı×é³õÊ¼»¯
         visit[i] = false;
     }
     dfs_1(pG, 0);
 
-    // DFS æ ˆ
+    // DFS Õ»
     printf("\nDFS2: ");
-    for (int i = 0; i < MAXSIZE; ++i) {  // è®¿é—®æ•°ç»„åˆå§‹åŒ–
+    for (int i = 0; i < MAXSIZE; ++i) {  // ·ÃÎÊÊı×é³õÊ¼»¯
         visit[i] = false;
     }
     dfs_2(pG, 0);
 
-    // æ— æƒå›¾å•å…ƒæœ€çŸ­è·¯å¾„
+    // ÎŞÈ¨Í¼µ¥Ôª×î¶ÌÂ·¾¶
     BFS_minPath(pG, 3);
     printf("\nLength: %d\n", dist[5]);
     printPath(pG, path,3, 5);
 
-    // Dijkstra æ±‚æœ€çŸ­è·¯å¾„
+    // Dijkstra Çó×î¶ÌÂ·¾¶
     memset(dist, -1, sizeof(dist));  //
     memset(path, -1, sizeof(path));  //
     memset(visit, false, sizeof(visit));
@@ -76,7 +76,7 @@ int main(void) {
     printf("\nLength: %d\n", dist[5]);
     printPath(pG, path,3, 5);
 
-    // floyd æ±‚æœ€çŸ­è·¯å¾„
+    // floyd Çó×î¶ÌÂ·¾¶
     printf("\n*** floyd  ***\n");
     floyd(pG);
     printf("len : %d\n", dp[3][5]);
@@ -84,7 +84,7 @@ int main(void) {
     printPathDp(pG, 3, 5);
     printf("%c ", pG->vexs[5]);
 
-    // prim æ±‚æœ€å°ç”Ÿæˆæ ‘
+    // prim Çó×îĞ¡Éú³ÉÊ÷
     printf("\n*** prim  ***\n");
     int sum = 0;
     prim(pG,0, sum);
@@ -97,15 +97,15 @@ int main(void) {
 }
 
 /**
-    æ€è·¯:ä»å›¾ä¸­ä»»é€‰ä¸€ä¸ªé¡¶ç‚¹ï¼ŒæŠŠå®ƒå½“æˆä¸€æ£µæ ‘
-    ç„¶åä»ä¸è¿™é¢—æ ‘ç›¸é‚»çš„è¾¹ä¸­ï¼Œæ‰¾åˆ°æƒå€¼æœ€å°çš„è¾¹ï¼Œå†æŠŠè¯¥è¾¹ä»¥åŠå…¶æ‰€è¿æ¥çš„é¡¶ç‚¹ï¼Œå¹¶å…¥æ ‘ä¸­ï¼Œé‡å¤æ­¤è¿‡ç¨‹ç›´åˆ°å›¾ä¸­æ‰€æœ‰é¡¶ç‚¹éƒ½è¢«å¹¶å…¥æ ‘ä¸­
-    æ—¶é—´å¤æ‚åº¦Oï¼ˆN^2ï¼‰
+    Ë¼Â·:´ÓÍ¼ÖĞÈÎÑ¡Ò»¸ö¶¥µã£¬°ÑËüµ±³ÉÒ»¿ÃÊ÷
+    È»ºó´ÓÓëÕâ¿ÅÊ÷ÏàÁÚµÄ±ßÖĞ£¬ÕÒµ½È¨Öµ×îĞ¡µÄ±ß£¬ÔÙ°Ñ¸Ã±ßÒÔ¼°ÆäËùÁ¬½ÓµÄ¶¥µã£¬²¢ÈëÊ÷ÖĞ£¬ÖØ¸´´Ë¹ı³ÌÖ±µ½Í¼ÖĞËùÓĞ¶¥µã¶¼±»²¢ÈëÊ÷ÖĞ
+    Ê±¼ä¸´ÔÓ¶ÈO£¨N^2£©
  */
 void prim(myGraph *pG, int v, int &sum){
-    for (int i = 0; i < pG->n; ++i) {  // åˆå§‹åŒ–
+    for (int i = 0; i < pG->n; ++i) {  // ³õÊ¼»¯
         visit[i] = false;
         lowcost[i] = pG->edges[v][i];
-//        if (lowcost[i] != INFINITY){  // å¯ä»¥ç”¨pathè®°å½•æœ€å°ç”Ÿæˆæ ‘çš„è·¯å¾„ æ‰“å° æˆ‘ç›´æ¥æ‰“å°
+//        if (lowcost[i] != INFINITY){  // ¿ÉÒÔÓÃpath¼ÇÂ¼×îĞ¡Éú³ÉÊ÷µÄÂ·¾¶ ´òÓ¡ ÎÒÖ±½Ó´òÓ¡
 //            path[i] = v;
 //        }else{
 //            path[i] = -1;
@@ -113,7 +113,7 @@ void prim(myGraph *pG, int v, int &sum){
     }
     visit[v] = true;
     lowcost[v] = 0;
-    printf("%c ", pG->vexs[v]); // æ‰“å°
+    printf("%c ", pG->vexs[v]); // ´òÓ¡
     for (int i = 0; i < pG->n - 1; ++i) {
         int min = INFINITY;
         int u = v;
@@ -124,11 +124,11 @@ void prim(myGraph *pG, int v, int &sum){
             }
         }
         visit[u] = true;
-        printf("%c ", pG->vexs[u]); // æ‰“å°
+        printf("%c ", pG->vexs[u]); // ´òÓ¡
         sum += lowcost[u];
         for (int k = 0; k <pG->n ; ++k) {
             if (!visit[k] && pG->edges[u][k] != INFINITY) {
-                if (lowcost[k] > pG->edges[u][k]){ // ä¸è¿ªæ°ä»€å¡”æ‹‰çš„åŒºåˆ«
+                if (lowcost[k] > pG->edges[u][k]){ // ÓëµÏ½ÜÊ²ËşÀ­µÄÇø±ğ
                     lowcost[k] = pG->edges[u][k];
 //                    path[k] = v;
                 }
@@ -143,7 +143,7 @@ void BFS_minPath(myGraph *pG, int i){
     memset(visit, false, sizeof(visit));
 
     queue<int> q;
-    dist[i] = 0; // ä»viåˆ°vi è·¯å¾„é•¿åº¦ä¸º0
+    dist[i] = 0; // ´Óviµ½vi Â·¾¶³¤¶ÈÎª0
     visit[i] = true;
     q.push(i);
     while (q.size() != 0) {
@@ -161,7 +161,7 @@ void BFS_minPath(myGraph *pG, int i){
 }
 
 void floyd(myGraph *pG){
-    for (int i = 0; i <pG->n ; ++i) { // åˆå§‹åŒ–
+    for (int i = 0; i <pG->n ; ++i) { // ³õÊ¼»¯
         for (int j = 0; j < pG->n; ++j) {
             dp[i][j] = pG->edges[i][j];
             pathDp[i][j] = -1;
@@ -182,7 +182,7 @@ void floyd(myGraph *pG){
     }
 }
 
-void printPathDp(myGraph * pG,int i, int j){  // åªèƒ½æ‰“å° i -> j ä¹‹é—´çš„è·¯å¾„ ä¸åŒ…æ‹¬iï¼Œj
+void printPathDp(myGraph * pG,int i, int j){  // Ö»ÄÜ´òÓ¡ i -> j Ö®¼äµÄÂ·¾¶ ²»°üÀ¨i£¬j
     if (pathDp[i][j] == -1){
         return;
     }
@@ -192,13 +192,13 @@ void printPathDp(myGraph * pG,int i, int j){  // åªèƒ½æ‰“å° i -> j ä¹‹é—´çš„è·
     printPathDp(pG, k, j);
 }
 /**
-    æ€æƒ³ï¼šè®¾ç½®ä¸¤ä¸ªé¡¶ç‚¹é›†åˆSï¼ŒTï¼Œå…¶ä¸­Så­˜æ”¾å›¾ä¸­å·²æ‰¾åˆ°æœ€çŸ­è·¯å¾„çš„é¡¶ç‚¹,Tå­˜æ”¾å›¾ä¸­å‰©ä½™é¡¶ç‚¹
-         åˆå§‹æ—¶SåŒ…å«æºç‚¹v0ï¼Œç„¶åä»Tä¸­é€‰å–åˆ°V0è·¯å¾„é•¿åº¦æœ€å°çš„é¡¶ç‚¹viï¼Œå°†viçº³å…¥Sï¼Œå¹¶ä¿®æ”¹v0åˆ°Tä¸­çš„æœ€çŸ­è·¯å¾„å€¼ï¼Œç›´åˆ°Tçš„é¡¶ç‚¹å…¨éƒ¨å¹¶å…¥Sä¸ºæ­¢
-    æ—¶é—´å¤æ‚åº¦ï¼šO(N^2)
+    Ë¼Ïë£ºÉèÖÃÁ½¸ö¶¥µã¼¯ºÏS£¬T£¬ÆäÖĞS´æ·ÅÍ¼ÖĞÒÑÕÒµ½×î¶ÌÂ·¾¶µÄ¶¥µã,T´æ·ÅÍ¼ÖĞÊ£Óà¶¥µã
+         ³õÊ¼Ê±S°üº¬Ô´µãv0£¬È»ºó´ÓTÖĞÑ¡È¡µ½V0Â·¾¶³¤¶È×îĞ¡µÄ¶¥µãvi£¬½«viÄÉÈëS£¬²¢ĞŞ¸Äv0µ½TÖĞµÄ×î¶ÌÂ·¾¶Öµ£¬Ö±µ½TµÄ¶¥µãÈ«²¿²¢ÈëSÎªÖ¹
+    Ê±¼ä¸´ÔÓ¶È£ºO(N^2)
 
  */
 void Dijkstra(myGraph *pG, int v){
-    for (int i = 0; i <pG->n ; ++i) { // åˆå§‹åŒ– INFINITY:è¡¨ç¤ºæ— ç©·å¤§  å³ä¸é€š
+    for (int i = 0; i <pG->n ; ++i) { // ³õÊ¼»¯ INFINITY:±íÊ¾ÎŞÇî´ó  ¼´²»Í¨
         dist[i] = pG->edges[v][i];
         visit[i] = false;
         if (dist[i] != INFINITY){
@@ -208,20 +208,20 @@ void Dijkstra(myGraph *pG, int v){
         }
     }
 
-    visit[v] = true;  // å°†æºç‚¹åŠ å…¥é›†åˆS
+    visit[v] = true;  // ½«Ô´µã¼ÓÈë¼¯ºÏS
     dist[v] = 0;
-    for (int i = 0; i < pG->n-1; ++i) { //  n-1æ¬¡
+    for (int i = 0; i < pG->n-1; ++i) { //  n-1´Î
         int temp = INFINITY;
         int u = v;
-        for (int j = 0; j < pG->n; ++j) {  // é€‰å– Tåˆ°Sä¸­çš„æœ€çŸ­è·¯å¾„æ‰€åœ¨çš„é¡¶ç‚¹Vu
+        for (int j = 0; j < pG->n; ++j) {  // Ñ¡È¡ Tµ½SÖĞµÄ×î¶ÌÂ·¾¶ËùÔÚµÄ¶¥µãVu
             if (!visit[j] && dist[j] < temp){
                 temp = dist[j];
                 u = j;
             }
         }
 
-        visit[u] = true; // å°†å…¶çº³å…¥é›†åˆS
-        for (int k = 0; k < pG->n; ++k) {  // æ›´æ–°æºç‚¹v0åˆ°Tä¸­çš„æœ€çŸ­è·¯å¾„
+        visit[u] = true; // ½«ÆäÄÉÈë¼¯ºÏS
+        for (int k = 0; k < pG->n; ++k) {  // ¸üĞÂÔ´µãv0µ½TÖĞµÄ×î¶ÌÂ·¾¶
             if (!visit[k] && pG->edges[u][k] != INFINITY){
                 int newDist = dist[u] + pG->edges[u][k];
                 if (newDist < dist[k]) {
@@ -233,7 +233,7 @@ void Dijkstra(myGraph *pG, int v){
     }
 }
 
-// æ‰“å° ä»iåˆ°jçš„æœ€çŸ­è·¯å¾„
+// ´òÓ¡ ´Óiµ½jµÄ×î¶ÌÂ·¾¶
 void printPath(myGraph *pG, int path[], int i, int j) {
     if (i == j) {
         printf("%c  ", pG->vexs[i]);
@@ -297,33 +297,33 @@ myGraph *createGraph() {
 
     myGraph *pG = (myGraph *) malloc(sizeof(myGraph));
 
-    printf("è¯·è¾“å…¥é¡¶ç‚¹æ•°ï¼š");
+    printf("ÇëÊäÈë¶¥µãÊı£º");
     scanf("%d", &pG->n);
-    printf("è¯·è¾“å…¥è¾¹æ•°:");
+    printf("ÇëÊäÈë±ßÊı:");
     scanf("%d", &pG->e);
 
-    printf("è¯·è¾“å…¥é¡¶ç‚¹ä¿¡æ¯(é¡¶ç‚¹æ ‡å¿—):");
+    printf("ÇëÊäÈë¶¥µãĞÅÏ¢(¶¥µã±êÖ¾):");
     for (i = 0; i < pG->n; ++i) {
-        getchar();     // ç¬¬ä¸€æ¬¡å¾ªç¯ç”¨æ¥æ¥æ”¶ scanf("%d %d", &pG->n, &pG->e)çš„ç©ºæ ¼å’Œå›è½¦;  å…¶å®ƒå¾ªç¯æ¥æ”¶ scanf("%c", &pG->vertices[i]);çš„ç©ºæ ¼å›è½¦
+        getchar();     // µÚÒ»´ÎÑ­»·ÓÃÀ´½ÓÊÕ scanf("%d %d", &pG->n, &pG->e)µÄ¿Õ¸ñºÍ»Ø³µ;  ÆäËüÑ­»·½ÓÊÕ scanf("%c", &pG->vertices[i]);µÄ¿Õ¸ñ»Ø³µ
         scanf("%c", &(pG->vexs[i]));
     }
 
-    // å¯¹ é‚»æ¥çŸ©é˜µè¿›è¡Œåˆå§‹åŒ–
+    // ¶Ô ÁÚ½Ó¾ØÕó½øĞĞ³õÊ¼»¯
     for (i = 0; i < MAXSIZE; ++i) {
         for (j = 0; j < MAXSIZE; ++j) {
-            pG->edges[i][j] = INFINITY;               // åœ¨æœ‰æƒå€¼çš„å›¾ä¸­ å› ä¸º0å¯èƒ½è¢«è¯¯ä»¥ä¸ºæ˜¯æƒå€¼ï¼Œæ‰€ä»¥æœ‰æ—¶ç”¨æ— ç©·å¤§è¡¨ç¤ºæ²¡æœ‰è¾¹ è¿™é‡Œæˆ‘ç”¨0ç­‰ä¸‹æ‰“å°çš„é€‚åˆå¥½çœ‹ä¸€ç‚¹
+            pG->edges[i][j] = INFINITY;               // ÔÚÓĞÈ¨ÖµµÄÍ¼ÖĞ ÒòÎª0¿ÉÄÜ±»ÎóÒÔÎªÊÇÈ¨Öµ£¬ËùÒÔÓĞÊ±ÓÃÎŞÇî´ó±íÊ¾Ã»ÓĞ±ß ÕâÀïÎÒÓÃ0µÈÏÂ´òÓ¡µÄÊÊºÏºÃ¿´Ò»µã
         }
     }
 
-    printf("è¯·è¾“å…¥å›¾çš„ç±»å‹(æ— å‘å›¾:0)ã€(æœ‰å‘å›¾:1):\n");
+    printf("ÇëÊäÈëÍ¼µÄÀàĞÍ(ÎŞÏòÍ¼:0)¡¢(ÓĞÏòÍ¼:1):\n");
     scanf("%d", &type);
 
     for (k = 0; k < pG->e; ++k) {
-        fflush(stdin);                          // åˆ·æ–°ç¼“å†²åŒº
-        printf("è¯·è¾“å…¥%dæ¡è¾¹çš„ä¸¤ä¸ªé¡¶ç‚¹ä»¥åŠæƒå€¼(ä»¥ç©ºæ ¼éš”å¼€)ï¼š", k + 1);
+        fflush(stdin);                          // Ë¢ĞÂ»º³åÇø
+        printf("ÇëÊäÈë%dÌõ±ßµÄÁ½¸ö¶¥µãÒÔ¼°È¨Öµ(ÒÔ¿Õ¸ñ¸ô¿ª)£º", k + 1);
         scanf("%c %c %d", &ch1, &ch2, &weight);
 
-        // å¾—åˆ° ä¸¤é¡¶ç‚¹åœ¨é‚»æ¥çŸ©é˜µä¸­çš„ä¸‹æ ‡ i j
+        // µÃµ½ Á½¶¥µãÔÚÁÚ½Ó¾ØÕóÖĞµÄÏÂ±ê i j
         for (i = 0; ch1 != pG->vexs[i]; ++i);
         for (j = 0; ch2 != pG->vexs[j]; ++j);
 
@@ -347,7 +347,7 @@ void showGraph(myGraph *pG) {
     }
     printf("\n");
 
-    printf("é‚»æ¥çŸ©é˜µï¼š\n");
+    printf("ÁÚ½Ó¾ØÕó£º\n");
     for (i = 0; i < pG->n; ++i) {
         for (j = 0; j < pG->n; ++j) {
             printf("%d   ", pG->edges[i][j]);

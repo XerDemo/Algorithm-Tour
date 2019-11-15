@@ -3,42 +3,42 @@
 #include <iostream>
 #include <memory.h>
 
-#define MAXSIZE 10                                  // æœ€å¤§é¡¶ç‚¹æ•° 10
-#define INFINITY 9999                               // æ— ç©·å¤§
+#define MAXSIZE 10                                  // ×î´ó¶¥µãÊı 10
+#define INFINITY 9999                               // ÎŞÇî´ó
 using namespace std;
 
 typedef struct node {
-    int adjVex;                                     // é‚»æ¥ç‚¹åŸŸ
-    int info;                                       // æƒå€¼
-    struct node *pNext;                            // ä¸‹ä¸€æ¡é‚»æ¥è¾¹çš„ç»“ç‚¹åœ°å€
+    int adjVex;                                     // ÁÚ½ÓµãÓò
+    int info;                                       // È¨Öµ
+    struct node *pNext;                            // ÏÂÒ»ÌõÁÚ½Ó±ßµÄ½áµãµØÖ·
 } edgesNode;
 
 typedef struct vNode {
-    char vertex;                                    // é¡¶ç‚¹æ ‡å¿—
-    edgesNode *firstedges;                         // ä¿å­˜ç¬¬ä¸€ä¸ªè¾¹èŠ‚ç‚¹åœ°å€çš„æŒ‡é’ˆ
+    char vertex;                                    // ¶¥µã±êÖ¾
+    edgesNode *firstedges;                         // ±£´æµÚÒ»¸ö±ß½ÚµãµØÖ·µÄÖ¸Õë
 } vertexNode;
 
 typedef struct {
-    vertexNode adjlist[MAXSIZE];                    // é¡¶ç‚¹æ•°ç»„
-    int n;                                          // é¡¶ç‚¹æ•°
-    int e;                                          // è¾¹æ•°
+    vertexNode adjlist[MAXSIZE];                    // ¶¥µãÊı×é
+    int n;                                          // ¶¥µãÊı
+    int e;                                          // ±ßÊı
 } ALGraph;
 
-bool visit[MAXSIZE];  // visit[i] = true è¡¨ç¤ºé¡¶ç‚¹viè¢«è®¿é—®
-int dist[MAXSIZE];    // dist[i]:è®°å½•é¡¶ç‚¹viçš„æœ€çŸ­è·ç¦»
-int path[MAXSIZE];    // è®°å½•æœ€çŸ­è·¯å¾„
+bool visit[MAXSIZE];  // visit[i] = true ±íÊ¾¶¥µãvi±»·ÃÎÊ
+int dist[MAXSIZE];    // dist[i]:¼ÇÂ¼¶¥µãviµÄ×î¶Ì¾àÀë
+int path[MAXSIZE];    // ¼ÇÂ¼×î¶ÌÂ·¾¶
 
 
-void createGraph(ALGraph *pG);                     // åˆ›å»ºå›¾
-void showGraph(ALGraph *pG);                       // æ‰“å°é‚»æ¥è¡¨
+void createGraph(ALGraph *pG);                     // ´´½¨Í¼
+void showGraph(ALGraph *pG);                       // ´òÓ¡ÁÚ½Ó±í
 void BFS(ALGraph *pG, int i);                      // bfs
-void dfs_1(ALGraph *pG, int i);                    // DFS é€’å½’
-void dfs_2(ALGraph *pG, int i);                    // DFS æ ˆ
-void BFS_minPath(ALGraph *pG, int i);              // BFSæ±‚æ— æƒå›¾çš„æœ€çŸ­è·¯å¾„ï¼Œåªèƒ½æ‰“å°ä»æºç‚¹viåˆ°vjçš„è·¯å¾„ï¼Œä¸èƒ½æ‰“å°éæºç‚¹åˆ°vjçš„è·¯å¾„
+void dfs_1(ALGraph *pG, int i);                    // DFS µİ¹é
+void dfs_2(ALGraph *pG, int i);                    // DFS Õ»
+void BFS_minPath(ALGraph *pG, int i);              // BFSÇóÎŞÈ¨Í¼µÄ×î¶ÌÂ·¾¶£¬Ö»ÄÜ´òÓ¡´ÓÔ´µãviµ½vjµÄÂ·¾¶£¬²»ÄÜ´òÓ¡·ÇÔ´µãµ½vjµÄÂ·¾¶
 void printPath(ALGraph *pG, int path[], int i, int j);
 
-void Dijkstra(ALGraph *pG, int i);     // Dijkstraæ±‚æœ‰æƒå›¾çš„æœ€çŸ­è·¯å¾„ åªèƒ½æ‰“å°ä»æºç‚¹viåˆ°vjçš„è·¯å¾„ï¼Œä¸èƒ½æ‰“å°éæºç‚¹åˆ°vjçš„è·¯å¾„
-bool TopoSort(ALGraph *pG);           // æ‹“æ‰‘æ’åº
+void Dijkstra(ALGraph *pG, int i);     // DijkstraÇóÓĞÈ¨Í¼µÄ×î¶ÌÂ·¾¶ Ö»ÄÜ´òÓ¡´ÓÔ´µãviµ½vjµÄÂ·¾¶£¬²»ÄÜ´òÓ¡·ÇÔ´µãµ½vjµÄÂ·¾¶
+bool TopoSort(ALGraph *pG);           // ÍØÆËÅÅĞò
 
 int main(void) {
     ALGraph G;
@@ -47,31 +47,31 @@ int main(void) {
 
     // BFS
     cout << "bfs: ";
-    for (int i = 0; i < MAXSIZE; ++i) {  // è®¿é—®æ•°ç»„åˆå§‹åŒ–
+    for (int i = 0; i < MAXSIZE; ++i) {  // ·ÃÎÊÊı×é³õÊ¼»¯
         visit[i] = false;
     }
     BFS(&G, 0);
 
-    // DFS é€’å½’
+    // DFS µİ¹é
     printf("\nDFS1: ");
-    for (int i = 0; i < MAXSIZE; ++i) {  // è®¿é—®æ•°ç»„åˆå§‹åŒ–
+    for (int i = 0; i < MAXSIZE; ++i) {  // ·ÃÎÊÊı×é³õÊ¼»¯
         visit[i] = false;
     }
     dfs_1(&G, 0);
 
-    // DFS æ ˆ
+    // DFS Õ»
     printf("\nDFS2: ");
-    for (int i = 0; i < MAXSIZE; ++i) {  // è®¿é—®æ•°ç»„åˆå§‹åŒ–
+    for (int i = 0; i < MAXSIZE; ++i) {  // ·ÃÎÊÊı×é³õÊ¼»¯
         visit[i] = false;
     }
     dfs_2(&G, 0);
 
-//    printf("\næ— å‘å›¾å•æºæœ€çŸ­è·¯:\n");
-//    BFS_minPath(&G, 4); // åˆå§‹æºç‚¹ä¸ºv0
+//    printf("\nÎŞÏòÍ¼µ¥Ô´×î¶ÌÂ·:\n");
+//    BFS_minPath(&G, 4); // ³õÊ¼Ô´µãÎªv0
 //    printf("------\n");
 //    printPath(&G, path, 4, 7);
 
-    printf("\n******æ‹“æ‰‘æ’åº******\n");
+    printf("\n******ÍØÆËÅÅĞò******\n");
     if (TopoSort(&G)) {
         printf("ok\n");
     } else {
@@ -82,11 +82,11 @@ int main(void) {
 
 bool TopoSort(ALGraph *pG) {
 //    printf("8664646\n");
-    int indegree[pG->n]; // é¡¶ç‚¹içš„å…¥åº¦
+    int indegree[pG->n]; // ¶¥µãiµÄÈë¶È
     memset(indegree, 0, sizeof(indegree));
-    queue<int> q;  // åªè¦æ˜¯å®¹å™¨å°±è¡Œ é˜Ÿåˆ—åˆ°æ—¶å€™æ˜¯æ­£åº
+    queue<int> q;  // Ö»ÒªÊÇÈİÆ÷¾ÍĞĞ ¶ÓÁĞµ½Ê±ºòÊÇÕıĞò
 
-    // ç»Ÿè®¡æ¯ä¸ªé¡¶ç‚¹çš„å…¥åº¦
+    // Í³¼ÆÃ¿¸ö¶¥µãµÄÈë¶È
     for (int i = 0; i < pG->n; ++i) {
         edgesNode *p = pG->adjlist[i].firstedges;
         while (p != NULL) {
@@ -99,23 +99,23 @@ bool TopoSort(ALGraph *pG) {
 //        printf("%d \n", indegree[i]);
 //    }
 
-    // å…¥åº¦ä¸º0 å…¥é˜Ÿ
+    // Èë¶ÈÎª0 Èë¶Ó
     for (int i = 0; i < pG->n; ++i) {
         if (indegree[i] == 0) {
             q.push(i);
         }
     }
-    int count = 0;  // ç»Ÿè®¡å·²ç»è¾“å‡ºçš„é¡¶ç‚¹æ•°
+    int count = 0;  // Í³¼ÆÒÑ¾­Êä³öµÄ¶¥µãÊı
     while (q.size() != 0) {
-        int front = q.front(); // å¼¹å‡ºä¸€ä¸ªå…¥åº¦ä¸º0çš„ç‚¹
+        int front = q.front(); // µ¯³öÒ»¸öÈë¶ÈÎª0µÄµã
         q.pop();
         printf("%c  ", pG->adjlist[front].vertex);
         count++;
-        // å°†æ‰€æœ‰frontæŒ‡å‘çš„èŠ‚ç‚¹ å…¥åº¦-1
+        // ½«ËùÓĞfrontÖ¸ÏòµÄ½Úµã Èë¶È-1
         edgesNode *p = pG->adjlist[front].firstedges;
         while (p != NULL) {
-            indegree[p->adjVex]--; // å…¥åº¦-1
-            if (indegree[p->adjVex] == 0) { // å‘ç°å…¥åº¦ä¸º0çš„ç‚¹
+            indegree[p->adjVex]--; // Èë¶È-1
+            if (indegree[p->adjVex] == 0) { // ·¢ÏÖÈë¶ÈÎª0µÄµã
                 q.push(p->adjVex);
             }
             p = p->pNext;
@@ -124,13 +124,13 @@ bool TopoSort(ALGraph *pG) {
     }
 
     if (count < pG->n) {
-        return false;  // å¤±è´¥ æœ‰å‘å›¾ä¸­ æœ‰å›è·¯
+        return false;  // Ê§°Ü ÓĞÏòÍ¼ÖĞ ÓĞ»ØÂ·
     } else {
         return true;
     }
 }
 
-// å¹¿åº¦ä¼˜å…ˆéå†
+// ¹ã¶ÈÓÅÏÈ±éÀú
 void BFS(ALGraph *pG, int i) {
     queue<int> q;
     printf("%c ", pG->adjlist[i].vertex);
@@ -139,8 +139,8 @@ void BFS(ALGraph *pG, int i) {
     while (q.size() != 0) {
         int front = q.front();
         q.pop();
-        edgesNode *p = pG->adjlist[front].firstedges; // è·å–èŠ‚ç‚¹adjlist[front]çš„è¾¹è¡¨
-        while (p != NULL) {
+        edgesNode *p = pG->adjlist[front].firstedges; // »ñÈ¡½Úµãadjlist[front]µÄ±ß±í
+        while (p != NULL) {      // ÈİÒ×Â©ÊÇ·ñ·ÃÎÊÕâ¸öÌõ¼ş
             if (visit[p->adjVex] == false) {
                 printf("%c ", pG->adjlist[p->adjVex].vertex);
                 visit[p->adjVex] = true;
@@ -151,7 +151,7 @@ void BFS(ALGraph *pG, int i) {
     }
 }
 
-// DFS é€’å½’
+// DFS µİ¹é
 void dfs_1(ALGraph *pG, int i) {
     printf("%c ", pG->adjlist[i].vertex);
     visit[i] = true;
@@ -165,7 +165,7 @@ void dfs_1(ALGraph *pG, int i) {
     }
 }
 
-// DFS éé€’å½’ æ ˆ
+// DFS ·Çµİ¹é Õ»
 void dfs_2(ALGraph *pG, int i) {
     stack<int> s;
     visit[i] = true;
@@ -180,8 +180,8 @@ void dfs_2(ALGraph *pG, int i) {
                 visit[p->adjVex] = true;
                 printf("%c ", pG->adjlist[p->adjVex].vertex);
                 s.push(p->adjVex);
-                p = pG->adjlist[p->adjVex].firstedges;  // æŒ‡å‘é¡¶ç‚¹æ•°ç»„æ ‡å·ä¸ºp->adjVexçš„èŠ‚ç‚¹
-            } else { // p = p->next æ˜¯åœ¨elseé‡Œé¢ ä¸å‰é¢ä¸ä¸€æ ·
+                p = pG->adjlist[p->adjVex].firstedges;  // Ö¸Ïò¶¥µãÊı×é±êºÅÎªp->adjVexµÄ½Úµã
+            } else { // p = p->next ÊÇÔÚelseÀïÃæ ÓëÇ°Ãæ²»Ò»Ñù
                 p = p->pNext;
             }
         }
@@ -189,9 +189,9 @@ void dfs_2(ALGraph *pG, int i) {
 }
 
 /***
- * BFS (æ— æƒå›¾)æ±‚å•æºæœ€çŸ­è·¯å¾„ ï¼Œåªèƒ½æ‰“å°ä»æºç‚¹viåˆ°vjçš„è·¯å¾„ï¼Œä¸èƒ½æ‰“å°éæºç‚¹åˆ°vjçš„è·¯å¾„
- * æ€è€ƒ: 1. dist èµ·åˆ°äº†ä»€ä¹ˆä½œç”¨?
- *                èµ·åˆ°äº†visit[]ä½œç”¨ åªè¦dist[i] != -1 å°±ä»£è¡¨æ²¡è®¿é—®è¿‡
+ * BFS (ÎŞÈ¨Í¼)Çóµ¥Ô´×î¶ÌÂ·¾¶ £¬Ö»ÄÜ´òÓ¡´ÓÔ´µãviµ½vjµÄÂ·¾¶£¬²»ÄÜ´òÓ¡·ÇÔ´µãµ½vjµÄÂ·¾¶
+ * Ë¼¿¼: 1. dist Æğµ½ÁËÊ²Ã´×÷ÓÃ?
+ *                Æğµ½ÁËvisit[]×÷ÓÃ Ö»Òªdist[i] != -1 ¾Í´ú±íÃ»·ÃÎÊ¹ı
  */
 
 void BFS_minPath(ALGraph *pG, int i) {
@@ -200,7 +200,7 @@ void BFS_minPath(ALGraph *pG, int i) {
     memset(visit, false, sizeof(visit));
 
     queue<int> q;
-    dist[i] = 0; // ä»viåˆ°vi è·¯å¾„é•¿åº¦ä¸º0
+    dist[i] = 0; // ´Óviµ½vi Â·¾¶³¤¶ÈÎª0
     visit[i] = true;
     q.push(i);
     while (q.size() != 0) {
@@ -211,10 +211,10 @@ void BFS_minPath(ALGraph *pG, int i) {
 
         while (p != NULL) {
             int j = p->adjVex;
-            if (visit[j] == false) { // vjæ²¡æœ‰è¢«è®¿é—®è¿‡
+            if (visit[j] == false) { // vjÃ»ÓĞ±»·ÃÎÊ¹ı
                 visit[j] = true;
-                dist[j] = dist[front] + 1; // æ›´æ–°ä»æºç‚¹åˆ°vjçš„è·¯å¾„é•¿åº¦  ä¹Ÿèµ·åˆ°äº†visit[]çš„æ•ˆæœ
-                path[j] = front;  // è®°å½•æœ€çŸ­è·¯å¾„vjçš„å‰ä¸€ä¸ªé¡¶ç‚¹
+                dist[j] = dist[front] + 1; // ¸üĞÂ´ÓÔ´µãµ½vjµÄÂ·¾¶³¤¶È  Ò²Æğµ½ÁËvisit[]µÄĞ§¹û
+                path[j] = front;  // ¼ÇÂ¼×î¶ÌÂ·¾¶vjµÄÇ°Ò»¸ö¶¥µã
 //                cout << "path[" << j << "]  =  " << front << endl;
                 q.push(j);
             }
@@ -224,7 +224,7 @@ void BFS_minPath(ALGraph *pG, int i) {
 }
 
 
-// æ‰“å° ä»iåˆ°jçš„æœ€çŸ­è·¯å¾„
+// ´òÓ¡ ´Óiµ½jµÄ×î¶ÌÂ·¾¶
 void printPath(ALGraph *pG, int path[], int i, int j) {
     if (i == j) {
         printf("%c  ", pG->adjlist[j].vertex);
@@ -236,44 +236,44 @@ void printPath(ALGraph *pG, int path[], int i, int j) {
 
 void createGraph(ALGraph *pG) {
     int i, j, k, type;
-    /********åŠ ä¸Šweightè¡¨ç¤ºæƒå€¼***********/
+    /********¼ÓÉÏweight±íÊ¾È¨Öµ***********/
     int weight;
-    /***************å’Œä¸åŠ æƒå€¼çš„åŒºåˆ«ä¹‹å¤„***************/
+    /***************ºÍ²»¼ÓÈ¨ÖµµÄÇø±ğÖ®´¦***************/
     char ch1, ch2;
-    printf("è¯·è¾“å…¥å›¾çš„é¡¶ç‚¹ä¸ªæ•°å’Œè¾¹æ•°(ç©ºæ ¼éš”å¼€)ï¼š");
+    printf("ÇëÊäÈëÍ¼µÄ¶¥µã¸öÊıºÍ±ßÊı(¿Õ¸ñ¸ô¿ª)£º");
     scanf("%d %d", &pG->n, &pG->e);
 
-    printf("è¯·è¾“å…¥å›¾çš„é¡¶ç‚¹ä¿¡æ¯ï¼›");
+    printf("ÇëÊäÈëÍ¼µÄ¶¥µãĞÅÏ¢£»");
     for (i = 0; i < pG->n; ++i) {
-        getchar();       // ç¬¬ä¸€æ¬¡å¾ªç¯ç”¨æ¥æ¥æ”¶ scanf("%d %d", &pG->n, &pG->e)çš„ç©ºæ ¼å’Œå›è½¦;  å…¶å®ƒå¾ªç¯æ¥æ”¶ scanf("%c", &pG->vertices[i]);çš„ç©ºæ ¼å›è½¦
-        scanf("%c", &(pG->adjlist[i].vertex));      // è¾“å…¥é¡¶ç‚¹ä¿¡æ¯
-        pG->adjlist[i].firstedges = NULL;           // æŒ‡å‘ç¬¬ä¸€ä¸ªè¾¹èŠ‚ç‚¹çš„æŒ‡é’ˆç½®ä¸º null
+        getchar();       // µÚÒ»´ÎÑ­»·ÓÃÀ´½ÓÊÕ scanf("%d %d", &pG->n, &pG->e)µÄ¿Õ¸ñºÍ»Ø³µ;  ÆäËüÑ­»·½ÓÊÕ scanf("%c", &pG->vertices[i]);µÄ¿Õ¸ñ»Ø³µ
+        scanf("%c", &(pG->adjlist[i].vertex));      // ÊäÈë¶¥µãĞÅÏ¢
+        pG->adjlist[i].firstedges = NULL;           // Ö¸ÏòµÚÒ»¸ö±ß½ÚµãµÄÖ¸ÕëÖÃÎª null
     }
 
-    printf("è¯·è¾“å…¥å›¾çš„ç±»å‹(æ— å‘å›¾:0)ã€(æœ‰å‘å›¾:1):\n");
+    printf("ÇëÊäÈëÍ¼µÄÀàĞÍ(ÎŞÏòÍ¼:0)¡¢(ÓĞÏòÍ¼:1):\n");
     scanf("%d", &type);
 
     for (k = 0; k < pG->e; ++k) {
         getchar();
-        printf("è¯·è¾“å…¥ç¬¬%dæ¡è¾¹çš„ä¸¤ä¸ªé¡¶ç‚¹å’Œæƒå€¼(ç©ºæ ¼éš”å¼€)ï¼š", k + 1);
+        printf("ÇëÊäÈëµÚ%dÌõ±ßµÄÁ½¸ö¶¥µãºÍÈ¨Öµ(¿Õ¸ñ¸ô¿ª)£º", k + 1);
 
-        /********************åŠ ä¸Šä¸€ä¸ªè¾“å…¥*******************/
-        scanf("%c %c %d", &ch1, &ch2, &weight);                     // ch1ï¼šå¼§å°¾  ch2ï¼šå¼§å¤´
-        /**************å’Œä¸åŠ æƒå€¼çš„åŒºåˆ«ä¹‹å¤„******************/
+        /********************¼ÓÉÏÒ»¸öÊäÈë*******************/
+        scanf("%c %c %d", &ch1, &ch2, &weight);                     // ch1£º»¡Î²  ch2£º»¡Í·
+        /**************ºÍ²»¼ÓÈ¨ÖµµÄÇø±ğÖ®´¦******************/
 
-        // æŸ¥æ‰¾è¿™æ¡è¾¹ å¯¹åº”çš„ä¸¤ä¸ªé¡¶ç‚¹çš„ä½ç½® i j
+        // ²éÕÒÕâÌõ±ß ¶ÔÓ¦µÄÁ½¸ö¶¥µãµÄÎ»ÖÃ i j
         for (i = 0; ch1 != pG->adjlist[i].vertex; ++i);
         for (j = 0; ch2 != pG->adjlist[j].vertex; ++j);
 
-        // åˆ›å»ºä¸€ä¸ªæ–°çš„è¾¹ç»“ç‚¹æŒ‚åˆ°å¯¹åº”çš„è¾¹ä¸Š  é‡‡ç”¨å¤´éƒ¨æ’å…¥æ³•
+        // ´´½¨Ò»¸öĞÂµÄ±ß½áµã¹Òµ½¶ÔÓ¦µÄ±ßÉÏ  ²ÉÓÃÍ·²¿²åÈë·¨
         edgesNode *pNew = (edgesNode *) malloc(sizeof(edgesNode));
         if (!pNew) {
             printf("malloc is failed!\n");
             exit(-1);
         }
         if (type == 1) {
-            // æœ‰å‘å›¾
-            pNew->adjVex = j;
+            // ÓĞÏòÍ¼
+            pNew->adjVex = j;    // ²»ÒªĞ´³ÉiÁË
             /*********************/
             pNew->info = weight;
             /**********************/
@@ -282,9 +282,9 @@ void createGraph(ALGraph *pG) {
         } else {
             pNew->adjVex = j;
             pNew->info = weight;
-            pNew->pNext = pG->adjlist[i].firstedges;
+            pNew->pNext = pG->adjlist[i].firstedges;   // Ò×³ö´í
             pG->adjlist[i].firstedges = pNew;
-            // å†åˆ›å»ºä¸€ä¸ªèŠ‚ç‚¹ ç„¶åå°† iæ”¹æˆj jæ”¹æˆi
+            // ÔÙ´´½¨Ò»¸ö½Úµã È»ºó½« i¸Ä³Éj j¸Ä³Éi
             edgesNode *p = (edgesNode *) malloc(sizeof(edgesNode));
             p->adjVex = i;
             p->info = weight;
@@ -298,7 +298,7 @@ void createGraph(ALGraph *pG) {
 
 void showGraph(ALGraph *pG) {
     int i;
-    printf("è¯¥å›¾çš„é‚»æ¥è¡¨ä¸ºï¼š\n");
+    printf("¸ÃÍ¼µÄÁÚ½Ó±íÎª£º\n");
     for (i = 0; i < pG->n; ++i) {
         printf("%d   %c     ", i, pG->adjlist[i].vertex);
         edgesNode *p = pG->adjlist[i].firstedges;
