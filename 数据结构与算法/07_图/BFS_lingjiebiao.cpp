@@ -290,7 +290,7 @@ bool TopoSort_path(ALGraph *pG, int flag) {
     if (flag == 1){ // 求 各顶点最早时间
         memset(ve, 0, sizeof(ve)); // 初始
     } else{ // 求各顶点最晚时间
-        memset(vl, 0, sizeof(vl));
+        memset(vl, 9999999, sizeof(vl));
         vl[pG->n - 1] = ve[pG->n - 1];
     }
 
@@ -349,7 +349,7 @@ void criticalPath(ALGraph *pG){
         while (p) {
             int k = p->adjVex;
             if (ve[i] == vl[k] - p->info) {
-                cout << pG->adjlist[i].vertex << "->" << pG->adjlist[k].vertex;
+                cout << pG->adjlist[i].vertex << "->" << pG->adjlist[k].vertex << "  ";
             }
             p = p->pNext;
         }
