@@ -27,7 +27,8 @@ typedef struct {
 bool visit[MAXSIZE];  // visit[i] = true 表示顶点vi被访问
 int dist[MAXSIZE];    // dist[i]:记录顶点vi的最短距离
 int path[MAXSIZE];    // 记录最短路径
-
+int ve[MAXSIZE]; // 各节点最早开始时间
+int vl[MAXSIZE]; // 各节点最晚开始时间
 
 void createGraph(ALGraph *pG);                     // 创建图
 void showGraph(ALGraph *pG);                       // 打印邻接表
@@ -39,32 +40,41 @@ void printPath(ALGraph *pG, int path[], int i, int j);
 
 void Dijkstra(ALGraph *pG, int i);     // Dijkstra求有权图的最短路径 只能打印从源点vi到vj的路径，不能打印非源点到vj的路径
 bool TopoSort(ALGraph *pG);           // 拓扑排序
+void pathItoJ(ALGraph *pG, int i, int j, bool visit[],vector<int> path);  // 打印从顶点i到j的所有路径
+
+bool TopSort2(ALGraph *pG, int marked[],vector<char >& res); // DFS 拓扑排序
+
+// 关键路径
+ALGraph * createReverse(ALGraph * pG);
+bool TopoSort_path(ALGraph *pG, int flag);
+void criticalPath(ALGraph *pG);
+
 
 int main(void) {
     ALGraph G;
     createGraph(&G);
     showGraph(&G);
 
-    // BFS
-    cout << "bfs: ";
-    for (int i = 0; i < MAXSIZE; ++i) {  // 访问数组初始化
-        visit[i] = false;
-    }
-    BFS(&G, 0);
-
-    // DFS 递归
-    printf("\nDFS1: ");
-    for (int i = 0; i < MAXSIZE; ++i) {  // 访问数组初始化
-        visit[i] = false;
-    }
-    dfs_1(&G, 0);
-
-    // DFS 栈
-    printf("\nDFS2: ");
-    for (int i = 0; i < MAXSIZE; ++i) {  // 访问数组初始化
-        visit[i] = false;
-    }
-    dfs_2(&G, 0);
+//    // BFS
+//    cout << "bfs: ";
+//    for (int i = 0; i < MAXSIZE; ++i) {  // 访问数组初始化
+//        visit[i] = false;
+//    }
+//    BFS(&G, 0);
+//
+//    // DFS 递归
+//    printf("\nDFS1: ");
+//    for (int i = 0; i < MAXSIZE; ++i) {  // 访问数组初始化
+//        visit[i] = false;
+//    }
+//    dfs_1(&G, 0);
+//
+//    // DFS 栈
+//    printf("\nDFS2: ");
+//    for (int i = 0; i < MAXSIZE; ++i) {  // 访问数组初始化
+//        visit[i] = false;
+//    }
+//    dfs_2(&G, 0);
 
 //    printf("\n无向图单源最短路:\n");
 //    BFS_minPath(&G, 4); // 初始源点为v0
@@ -77,7 +87,68 @@ int main(void) {
     } else {
         printf("false\n");
     }
+
+//    cout << endl;
+//    cout << " DFS拓扑排序   " << endl;
+//    int finishTime[G.n];
+//    memset(finishTime, 0, sizeof(finishTime));
+//    memset(visit, false, sizeof(visit));
+//    int time = 0;
+//    for (int i = 0; i <G.n ; ++i) {
+//        if (!visit[i]) {
+//            topSort2(&G, i, visit, time, finishTime);
+//        }
+//    }
+//
+//    for (int i = 0; i < G.n; ++i) {
+//        i
+//    }
+
+//    cout << "i  to J DFS path:" << endl;
+//    memset(visit, false, sizeof(visit));
+//    vector<int> path;
+//    pathItoJ(&G, 3, 4, visit, path);
+
+    int marked[500];
+    memset(marked, 0, sizeof(marked));
+    vector<char > res;
+    if (TopSort2(&G, marked, res)){
+        cout << "ok" << endl;
+        for (int i = res.size(); i >= 0 ; --i) {
+            cout << res[i] << "   ";
+        }
+    }else{
+        cout << "false" << endl;
+    }
+
+
+    cout << "\n\n关键路径 " << endl;
+    criticalPath(&G);
     return 0;
+}
+
+
+void pathItoJ(ALGraph *pG, int i, int j, bool visit[],vector<int> path){
+    if (i == j) {
+        path.push_back(i);
+        for (int k = 0; k <path.size() ; ++k) {
+            cout << pG->adjlist[path[k]].vertex << "  ";
+        }
+        cout << endl;
+        return;
+    }
+    visit[i] = true;
+    path.push_back(i);
+    edgesNode * p = pG->adjlist[i].firstedges;
+    while (p != NULL) {
+        int k = p->adjVex;
+        if (!visit[k]) {
+            pathItoJ(pG, k, j, visit, path);
+        }
+        p = p->pNext;
+    }
+    visit[i] = false;  // 回溯
+    path.pop_back();   // 回溯
 }
 
 bool TopoSort(ALGraph *pG) {
@@ -127,6 +198,161 @@ bool TopoSort(ALGraph *pG) {
         return false;  // 失败 有向图中 有回路
     } else {
         return true;
+    }
+}
+
+// DFS 拓扑排序
+// marked[i] = 0 尚未访问
+// marked[i] = -1 正在当前节点及其子孙
+// marked[i] = 1 已经被访问
+bool __TopSort2(ALGraph *pG, int v, int marked[],vector<char> &res){
+    if (marked[v] == -1){
+        return false; //有环
+    }
+    if (marked[v] == 1){
+        return true;
+    }
+    marked[v] = -1;
+    // 遍历相邻节点
+    edgesNode *p = pG->adjlist[v].firstedges;
+    while (p != NULL) {
+        int k = p->adjVex;
+        if (!__TopSort2(pG, k, marked, res)) {
+            return false;
+        }
+        p = p->pNext;
+    }
+    marked[v] = 1;
+    res.push_back(pG->adjlist[v].vertex);
+    return true; // 无环
+}
+
+
+bool TopSort2(ALGraph *pG, int marked[],vector<char >& res){
+    for (int i = 0; i <pG->n ; ++i) {
+        if (!__TopSort2(pG, i, marked, res)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ *  关键路径：图G采用邻接表存储结构，构造图G的逆邻接表G2，对G采用拓扑排序，计算出各顶点最早发生时间ve[]
+ *          对G2采用拓扑排序，计算最晚发生时间vl[]
+ *          然后再遍历图，活动k->j的最早时间（ve[k]）与最晚时间（vl[j]-权值） 相等，即为关键活动
+ */
+
+
+// 构造逆邻接表
+ALGraph * createReverse(ALGraph * pG){
+    if (pG == NULL) {
+        return pG;
+    }
+    // 初始化
+    ALGraph *G2 = (ALGraph *) malloc(sizeof(ALGraph));
+    G2->n = pG->n;
+    G2->e = pG->e;
+    for (int i = 0; i <G2->n ; ++i) {
+        G2->adjlist[i].vertex = pG->adjlist[i].vertex;
+        G2->adjlist[i].firstedges = NULL;
+    }
+    // 构造
+    for (int i = 0; i <pG->n ; ++i) {
+        edgesNode *p = pG->adjlist[i].firstedges;
+        while (p != NULL) {
+            int k = p->adjVex;
+            edgesNode *newNode = (edgesNode *) malloc(sizeof(edgesNode));
+            newNode->adjVex = i;
+            newNode->info = p->info;
+            newNode->pNext = G2->adjlist[k].firstedges;  // 头插法
+            G2->adjlist[k].firstedges = newNode;
+            p = p->pNext;
+        }
+    }
+    return G2;
+}
+
+// 用于关键路径
+bool TopoSort_path(ALGraph *pG, int flag) {
+    int indegree[pG->n]; // 顶点i的入度
+    memset(indegree, 0, sizeof(indegree));
+    queue<int> q;  // 只要是容器就行 队列到时候是正序
+
+    // 统计每个顶点的入度
+    for (int i = 0; i < pG->n; ++i) {
+        edgesNode *p = pG->adjlist[i].firstedges;
+        while (p != NULL) {
+            indegree[p->adjVex]++;
+            p = p->pNext;
+        }
+    }
+    if (flag == 1){ // 求 各顶点最早时间
+        memset(ve, 0, sizeof(ve)); // 初始
+    } else{ // 求各顶点最晚时间
+        memset(vl, 0, sizeof(vl));
+        vl[pG->n - 1] = ve[pG->n - 1];
+    }
+
+
+    // 入度为0 入队
+    for (int i = 0; i < pG->n; ++i) {
+        if (indegree[i] == 0) {
+            q.push(i);
+        }
+    }
+
+    int count = 0;  // 统计已经输出的顶点数
+    while (q.size() != 0) {
+        int front = q.front(); // 弹出一个入度为0的点
+        q.pop();
+        printf("%c  ", pG->adjlist[front].vertex);
+        count++;
+        // 将所有front指向的节点 入度-1
+        edgesNode *p = pG->adjlist[front].firstedges;
+        while (p != NULL) {
+            int k = p->adjVex;
+            indegree[k]--; // 入度-1
+            if (indegree[k] == 0) { // 发现入度为0的点
+                q.push(k);
+            }
+
+            if (flag == 1) {
+                if (ve[front] + p->info > ve[k]){ // 更新节点k的最早发生时间，取最大值
+                    ve[k] = ve[front] + p->info;
+                }
+            } else{
+                if (vl[front] - p->info < vl[k]) {
+                    vl[k] = vl[front] - p->info;
+                }
+            }
+            p = p->pNext;
+        }
+    }
+
+    if (count < pG->n) {
+        return false;  // 失败 有向图中 有回路
+    } else {
+        return true;
+    }
+}
+
+void criticalPath(ALGraph *pG){
+    if (pG == NULL) {
+        return;
+    }
+    ALGraph *G2 = createReverse(pG);
+    TopoSort_path(pG, 1);
+    TopoSort_path(G2, 2);
+    for (int i = 0; i < pG->n; ++i) {
+        edgesNode *p = pG->adjlist[i].firstedges;
+        while (p) {
+            int k = p->adjVex;
+            if (ve[i] == vl[k] - p->info) {
+                cout << pG->adjlist[i].vertex << "->" << pG->adjlist[k].vertex;
+            }
+            p = p->pNext;
+        }
     }
 }
 
