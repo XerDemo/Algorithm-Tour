@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/4.3.3Tree/03.postOrder/Solution2.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Ayyay/Array.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Ayyay/LinkedList.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CMakeLists.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Graph/BFS_lingjiebiao.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graph/Kruskal.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graph/Text.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Graph/lingjiejuzhen.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Pratice/Haffuman.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Pratice/LinkTreeLeaf.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Pratice/MaxWitdh.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Pratice/PrintAncestors.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Pratice/postExpress.c" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test/loserTree.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test/tuxiangyasuo.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Test/zuiyouerchasuosoushu.cpp" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

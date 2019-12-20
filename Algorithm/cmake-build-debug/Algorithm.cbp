@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Algorithm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Algorithm">
+				<Option output="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Algorithm.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Algorithm"/>
+					<CompileFile command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Algorithm/fast">
+				<Option output="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Algorithm.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/MySoft/LLVM/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 Algorithm/fast"/>
+					<CompileFile command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MySoft/LLVM/bin/mingw32-make.exe -f &quot;C:/Users/XerDemo/Desktop/Algorithm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/03.postOrder/Solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/04.levelOrder/Solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/05.TreeHeight/maxDepth.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/05.TreeHeight/minDepth.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/06.ContrustTree/inOrderAndPostOrder.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/06.ContrustTree/preOrderAndInorderToTree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/07.Complete Binary Tree/isCompleteTree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/08.DoubleBranchNodeNum/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/08.DoubleBranchNodeNum/Solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/09.Swap Left And Right/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/09.Swap Left And Right/Solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/10.Kth in preOrder/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/11.DeleteSubTree/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/11.DeleteSubTree/Solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/12.printAncestorNode/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/13.lowestCommonAncestor/Solution_BST.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/13.lowestCommonAncestor/Solution_Tree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/14.maxWitdhOfTree/Solution_typeOne.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/14.maxWitdhOfTree/Solution_typeTwo.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/15.fullTreePreToPost/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/16.leftNodeToList/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/17.similaiTree/Solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/19.WPL/Solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/19.WPL/solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/20.InorderExpTree/Solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/4.3.3Tree/ThreadTree/ThreadTree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Ayyay/LinkedList.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Graph/BFS_lingjiebiao.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Graph/Kruskal.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Graph/Text.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Graph/lingjiejuzhen.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Graph/quanpailie.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Heap/HeapSort.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Heap/MaxHeap.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/LinkedList/16pattern/Solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/LinkedList/23/Solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/LinkedList/6.removeMIn/LinkedListHelper.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/LinkedList/6.removeMIn/Solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/Deletetree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/Haffuman.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/LinkTreeLeaf.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/MaxWitdh.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/PostBypre.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/PrintAncestors.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/Stack.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/T.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/Z.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Pratice/postExpress.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Queue/ArrayQueue.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Queue/LinkedQueue.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Queue/Test.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Queue/solution.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/Ack.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/BubbleSort.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/HeapSort.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/InsertSort/InsertionSort.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/InsertSort/SortHelper.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/Main.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/QuickSort/Main.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/QuickSort/QuickSortTwoWays.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/QuickSort/SortHelp.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/QuickSortTwoWays.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/QuickThreeWays.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/ShellSort.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/SortHelp.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/T.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/heapSort.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/heapSort.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Sort/text.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Stack/ArrayStack.h">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Stack/LinkedStack.c">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Stack/Solution1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Stack/solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/Closert.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/HashTable.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/Linkqueue.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/Matricx.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/Test1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/f.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/loserTree.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/shizihebing1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/solution2.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/stack.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/tuxiangyasuo.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/Test/zuiyouerchasuosoushu.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/lanqiaobeizhneti/10th c++ A/1.cpp">
+			<Option target="Algorithm"/>
+		</Unit>
+		<Unit filename="C:/Users/XerDemo/Desktop/Algorithm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

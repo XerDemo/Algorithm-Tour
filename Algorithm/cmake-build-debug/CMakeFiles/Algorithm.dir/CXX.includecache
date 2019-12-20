@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/XerDemo/Desktop/Algorithm/Graph/BFS_lingjiebiao.cpp
+queue
+-
+stack
+-
+iostream
+-
+memory.h
+-
+
+C:/Users/XerDemo/Desktop/Algorithm/Graph/Kruskal.cpp
+
+C:/Users/XerDemo/Desktop/Algorithm/Graph/lingjiejuzhen.cpp
+
+C:/Users/XerDemo/Desktop/Algorithm/Graph/quanpailie.cpp
+

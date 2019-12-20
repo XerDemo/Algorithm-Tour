@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Test/stack.cpp" line="22" mnemonic="9" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Algorithm" targetName="Algorithm" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5812fca-2ce0-40f2-8b7b-325477c6dc13" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Graph/lingjiejuzhen.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.3.3Tree/13.lowestCommonAncestor/Solution_BST.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-101">
+              <caret line="39" selection-start-line="39" selection-end-line="54" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.3.3Tree/15.fullTreePreToPost/Solution1.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" column="70" lean-forward="true" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.3.3Tree/20.InorderExpTree/Solution.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="68" selection-start-line="68" selection-end-line="71" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Heap/HeapSort.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="41" lean-forward="true" selection-start-column="2" selection-end-line="64" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Stack/Solution1.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Stack/solution2.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="30" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.3.3Tree/13.lowestCommonAncestor/Solution_Tree.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="52" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sort/QuickThreeWays.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" selection-end-line="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/Linkqueue.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1488">
+              <caret line="62" column="6" selection-end-line="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>remove</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Stack/Solution1.cpp" />
+        <option value="$PROJECT_DIR$/Queue/ArrayQueue.c" />
+        <option value="$PROJECT_DIR$/Queue/ArrayQueue.h" />
+        <option value="$PROJECT_DIR$/Queue/solution.cpp" />
+        <option value="$PROJECT_DIR$/Queue/Test.cpp" />
+        <option value="$PROJECT_DIR$/4.3.3Tree/10.Kth in preOrder/Solution1.cpp" />
+        <option value="$PROJECT_DIR$/4.3.3Tree/11.DeleteSubTree/Solution1.cpp" />
+        <option value="$PROJECT_DIR$/4.3.3Tree/ThreadTree/ThreadTree.cpp" />
+        <option value="$PROJECT_DIR$/Sort/ShellSort.cpp" />
+        <option value="$PROJECT_DIR$/Sort/InsertSort/SortHelper.h" />
+        <option value="$PROJECT_DIR$/Sort/BubbleSoet/BubbleSort.cpp" />
+        <option value="$PROJECT_DIR$/Sort/SortHelp.h" />
+        <option value="$PROJECT_DIR$/Sort/HeapSort.h" />
+        <option value="$PROJECT_DIR$/Sort/BubbleSort.cpp" />
+        <option value="$PROJECT_DIR$/Sort/heapSort.cpp" />
+        <option value="$PROJECT_DIR$/Test/Closert.cpp" />
+        <option value="$PROJECT_DIR$/Test/f.cpp" />
+        <option value="$PROJECT_DIR$/Test/solution2.cpp" />
+        <option value="$PROJECT_DIR$/Test/shizihebing1.cpp" />
+        <option value="$PROJECT_DIR$/Test/zuiyouerchasuosoushu.cpp" />
+        <option value="$PROJECT_DIR$/Test/图像压缩.cpp" />
+        <option value="$PROJECT_DIR$/Test/tuxiangyasuo.cpp" />
+        <option value="$PROJECT_DIR$/Heap/MaxHeap.cpp" />
+        <option value="$PROJECT_DIR$/Test/Matricx.cpp" />
+        <option value="$PROJECT_DIR$/Sort/InsertSort/InsertionSort.cpp" />
+        <option value="$PROJECT_DIR$/lanqiaobeizhneti/10th c++ A/1.cpp" />
+        <option value="$PROJECT_DIR$/Test/Test1.cpp" />
+        <option value="$PROJECT_DIR$/LinkedList/23/Solution.cpp" />
+        <option value="$PROJECT_DIR$/Test/stack.cpp" />
+        <option value="$PROJECT_DIR$/4.3.3Tree/13.lowestCommonAncestor/Solution_BST.cpp" />
+        <option value="$PROJECT_DIR$/4.3.3Tree/13.lowestCommonAncestor/Solution_Tree.cpp" />
+        <option value="$PROJECT_DIR$/4.3.3Tree/12.printAncestorNode/Solution1.cpp" />
+        <option value="$PROJECT_DIR$/Sort/QuickThreeWays.h" />
+        <option value="$PROJECT_DIR$/Sort/QuickSortTwoWays.h" />
+        <option value="$PROJECT_DIR$/Sort/Main.cpp" />
+        <option value="$PROJECT_DIR$/Sort/QuickSort/SortHelp.h" />
+        <option value="$PROJECT_DIR$/Sort/QuickSort/QuickSortTwoWays.h" />
+        <option value="$PROJECT_DIR$/Sort/QuickSort/Main.cpp" />
+        <option value="$PROJECT_DIR$/Sort/text.cpp" />
+        <option value="$PROJECT_DIR$/Sort/T.cpp" />
+        <option value="$PROJECT_DIR$/Graph/Text.cpp" />
+        <option value="$PROJECT_DIR$/Sort/Ack.cpp" />
+        <option value="$PROJECT_DIR$/Test/loserTree.cpp" />
+        <option value="$PROJECT_DIR$/Test/HashTable.cpp" />
+        <option value="$PROJECT_DIR$/Test/Linkqueue.cpp" />
+        <option value="$PROJECT_DIR$/Graph/quanpailie.cpp" />
+        <option value="$PROJECT_DIR$/Graph/Kruskal.cpp" />
+        <option value="$PROJECT_DIR$/Graph/BFS_lingjiebiao.cpp" />
+        <option value="$PROJECT_DIR$/Graph/lingjiejuzhen.cpp" />
+        <option value="$PROJECT_DIR$/Heap/HeapSort.cpp" />
+        <option value="$PROJECT_DIR$/Stack/solution2.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-610" />
+    <option name="y" value="300" />
+    <option name="width" value="1940" />
+    <option name="height" value="690" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Heap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Sort" type="462c0819:PsiDirectoryNode" />
+              <item name="QuickSort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\Sort" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\LinkedList\16pattern" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\LinkedList\6.removeMIn" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\4.3.3综合\后序遍历非递归" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\LinkedList\23" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\LinkedList\16pattern" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\4.3.3Tree\4.levelOrder" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\4.3.3综合\后序遍历非递归" />
+      <recent name="C:\Users\XerDemo\Desktop\Algorithm\Pratice" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Algorithm">
+    <configuration name="Algorithm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithm" TARGET_NAME="Algorithm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Algorithm" RUN_TARGET_NAME="Algorithm">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Algorithm" RUN_TARGET_NAME="Algorithm" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Algorithm" />
+      <item itemvalue="Application.Build All" />
+    </list>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",KIND" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5812fca-2ce0-40f2-8b7b-325477c6dc13" name="Default" comment="" />
+      <created>1531368186331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531368186331</updated>
+      <workItem from="1531368189527" duration="1817000" />
+      <workItem from="1531376641090" duration="3261000" />
+      <workItem from="1531667497673" duration="40000" />
+      <workItem from="1531667568561" duration="680000" />
+      <workItem from="1531730892075" duration="14287000" />
+      <workItem from="1531789703749" duration="3304000" />
+      <workItem from="1531839171485" duration="4064000" />
+      <workItem from="1531898910106" duration="9963000" />
+      <workItem from="1531925132451" duration="826000" />
+      <workItem from="1532008999259" duration="717000" />
+      <workItem from="1532092575733" duration="778000" />
+      <workItem from="1532096330771" duration="1391000" />
+      <workItem from="1532253847914" duration="1656000" />
+      <workItem from="1532269943656" duration="474000" />
+      <workItem from="1532425395255" duration="11361000" />
+      <workItem from="1532510374628" duration="1343000" />
+      <workItem from="1532590161889" duration="631000" />
+      <workItem from="1532590989657" duration="4397000" />
+      <workItem from="1532663093934" duration="9000000" />
+      <workItem from="1532744533198" duration="6925000" />
+      <workItem from="1532761036371" duration="951000" />
+      <workItem from="1532762221813" duration="2073000" />
+      <workItem from="1532790913512" duration="656000" />
+      <workItem from="1532851612623" duration="7625000" />
+      <workItem from="1532878147457" duration="1951000" />
+      <workItem from="1532880133572" duration="382000" />
+      <workItem from="1532911576549" duration="1162000" />
+      <workItem from="1532967351440" duration="2505000" />
+      <workItem from="1533018884456" duration="9858000" />
+      <workItem from="1533048167491" duration="2497000" />
+      <workItem from="1533110044582" duration="2291000" />
+      <workItem from="1533392171526" duration="3050000" />
+      <workItem from="1534423363316" duration="4503000" />
+      <workItem from="1535649324739" duration="487000" />
+      <workItem from="1535782063210" duration="6000" />
+      <workItem from="1537013355550" duration="1994000" />
+      <workItem from="1537022800303" duration="1090000" />
+      <workItem from="1537061238521" duration="10479000" />
+      <workItem from="1537090936897" duration="2002000" />
+      <workItem from="1537330217031" duration="6737000" />
+      <workItem from="1537422159756" duration="9309000" />
+      <workItem from="1537935053246" duration="3420000" />
+      <workItem from="1537947977479" duration="1198000" />
+      <workItem from="1538032545381" duration="17000" />
+      <workItem from="1538032764001" duration="2729000" />
+      <workItem from="1538037125068" duration="4419000" />
+      <workItem from="1538206192041" duration="79000" />
+      <workItem from="1538219159891" duration="684000" />
+      <workItem from="1538625643495" duration="150000" />
+      <workItem from="1538625836545" duration="11386000" />
+      <workItem from="1538715812772" duration="14481000" />
+      <workItem from="1538807635123" duration="5049000" />
+      <workItem from="1538827080262" duration="1926000" />
+      <workItem from="1538888819762" duration="9194000" />
+      <workItem from="1538904778186" duration="6548000" />
+      <workItem from="1538971463370" duration="3440000" />
+      <workItem from="1538998177153" duration="2872000" />
+      <workItem from="1539061349948" duration="8846000" />
+      <workItem from="1539158545736" duration="4529000" />
+      <workItem from="1539239145747" duration="7386000" />
+      <workItem from="1539420614733" duration="2675000" />
+      <workItem from="1539427740674" duration="305000" />
+      <workItem from="1539428489958" duration="460000" />
+      <workItem from="1539482403844" duration="18182000" />
+      <workItem from="1539763017515" duration="3204000" />
+      <workItem from="1539770536811" duration="1271000" />
+      <workItem from="1539774069546" duration="5630000" />
+      <workItem from="1539839014407" duration="21067000" />
+      <workItem from="1540005456477" duration="21000" />
+      <workItem from="1540017614631" duration="4149000" />
+      <workItem from="1540087156226" duration="4153000" />
+      <workItem from="1540174752372" duration="16276000" />
+      <workItem from="1540381719035" duration="449000" />
+      <workItem from="1541761208993" duration="588000" />
+      <workItem from="1541769130982" duration="675000" />
+      <workItem from="1543064790020" duration="2124000" />
+      <workItem from="1543069749463" duration="2261000" />
+      <workItem from="1543111736634" duration="15198000" />
+      <workItem from="1543148774098" duration="789000" />
+      <workItem from="1543322576469" duration="5637000" />
+      <workItem from="1543364116071" duration="1384000" />
+      <workItem from="1543368937184" duration="4279000" />
+      <workItem from="1543383000643" duration="694000" />
+      <workItem from="1543401333738" duration="2267000" />
+      <workItem from="1543492785676" duration="1745000" />
+      <workItem from="1543500829679" duration="2216000" />
+      <workItem from="1543573051964" duration="3931000" />
+      <workItem from="1543647876389" duration="3870000" />
+      <workItem from="1543664470975" duration="3563000" />
+      <workItem from="1543668115566" duration="324000" />
+      <workItem from="1543668537771" duration="1889000" />
+      <workItem from="1543677901472" duration="1048000" />
+      <workItem from="1543974264687" duration="640000" />
+      <workItem from="1547221004455" duration="2318000" />
+      <workItem from="1547262397969" duration="1742000" />
+      <workItem from="1547783057587" duration="1275000" />
+      <workItem from="1548149309884" duration="1919000" />
+      <workItem from="1549026990405" duration="1640000" />
+      <workItem from="1549028785348" duration="1749000" />
+      <workItem from="1549031538725" duration="5343000" />
+      <workItem from="1549070095783" duration="4880000" />
+      <workItem from="1549101297808" duration="13476000" />
+      <workItem from="1549119835080" duration="807000" />
+      <workItem from="1549197905760" duration="4432000" />
+      <workItem from="1549346810579" duration="1066000" />
+      <workItem from="1549359333438" duration="638000" />
+      <workItem from="1549361245587" duration="7166000" />
+      <workItem from="1549441712188" duration="4651000" />
+      <workItem from="1549504644184" duration="7566000" />
+      <workItem from="1549521668155" duration="1587000" />
+      <workItem from="1550047445901" duration="303000" />
+      <workItem from="1550216103124" duration="20145000" />
+      <workItem from="1550244487297" duration="1182000" />
+      <workItem from="1550285397330" duration="13792000" />
+      <workItem from="1550400406565" duration="8283000" />
+      <workItem from="1550668354010" duration="255000" />
+      <workItem from="1550668799632" duration="3323000" />
+      <workItem from="1550714029655" duration="3142000" />
+      <workItem from="1550736697949" duration="4180000" />
+      <workItem from="1550755978980" duration="4706000" />
+      <workItem from="1550762817616" duration="1926000" />
+      <workItem from="1550764819688" duration="4532000" />
+      <workItem from="1550798998338" duration="6201000" />
+      <workItem from="1550831241311" duration="8181000" />
+      <workItem from="1550887434158" duration="8696000" />
+      <workItem from="1550910315768" duration="1961000" />
+      <workItem from="1550922022254" duration="2589000" />
+      <workItem from="1550931287574" duration="702000" />
+      <workItem from="1551106740986" duration="1581000" />
+      <workItem from="1551168321559" duration="2564000" />
+      <workItem from="1552056875848" duration="383000" />
+      <workItem from="1552127772690" duration="3419000" />
+      <workItem from="1552203847269" duration="3521000" />
+      <workItem from="1552300672956" duration="824000" />
+      <workItem from="1552484184580" duration="36000" />
+      <workItem from="1552538009354" duration="1863000" />
+      <workItem from="1552559034708" duration="835000" />
+      <workItem from="1554606253835" duration="44000" />
+      <workItem from="1554619019562" duration="5627000" />
+      <workItem from="1554814026000" duration="1310000" />
+      <workItem from="1554899509179" duration="4293000" />
+      <workItem from="1554906405655" duration="1156000" />
+      <workItem from="1559308602533" duration="106000" />
+      <workItem from="1560867568747" duration="3919000" />
+      <workItem from="1560912229317" duration="661000" />
+      <workItem from="1561024108309" duration="3171000" />
+      <workItem from="1561034000766" duration="2348000" />
+      <workItem from="1561720545016" duration="6065000" />
+      <workItem from="1561776475567" duration="5476000" />
+      <workItem from="1563796022450" duration="2385000" />
+      <workItem from="1563876653652" duration="828000" />
+      <workItem from="1563947197156" duration="1901000" />
+      <workItem from="1564058379573" duration="107000" />
+      <workItem from="1564563416471" duration="3589000" />
+      <workItem from="1564638973754" duration="2275000" />
+      <workItem from="1565243738403" duration="3910000" />
+      <workItem from="1565424068205" duration="1099000" />
+      <workItem from="1565596890322" duration="1856000" />
+      <workItem from="1565606354497" duration="106000" />
+      <workItem from="1565853940326" duration="3788000" />
+      <workItem from="1567166110299" duration="5000" />
+      <workItem from="1567167373612" duration="2037000" />
+      <workItem from="1567246701024" duration="290000" />
+      <workItem from="1567252170830" duration="4831000" />
+      <workItem from="1567319117843" duration="1790000" />
+      <workItem from="1567581040713" duration="2122000" />
+      <workItem from="1568449053124" duration="1002000" />
+      <workItem from="1568707904766" duration="1181000" />
+      <workItem from="1568775521851" duration="6510000" />
+      <workItem from="1568788809657" duration="4612000" />
+      <workItem from="1569498055199" duration="4380000" />
+      <workItem from="1569565296301" duration="3931000" />
+      <workItem from="1569657989638" duration="2831000" />
+      <workItem from="1569918847306" duration="1646000" />
+      <workItem from="1569997065730" duration="2641000" />
+      <workItem from="1570085448298" duration="1191000" />
+      <workItem from="1570109861948" duration="1801000" />
+      <workItem from="1570630260248" duration="1274000" />
+      <workItem from="1570632541938" duration="1500000" />
+      <workItem from="1570864585215" duration="554000" />
+      <workItem from="1571123415414" duration="2069000" />
+      <workItem from="1571380105637" duration="2100000" />
+      <workItem from="1571727426118" duration="942000" />
+      <workItem from="1571844286886" duration="869000" />
+      <workItem from="1571911240486" duration="10579000" />
+      <workItem from="1571928363023" duration="755000" />
+      <workItem from="1571988695180" duration="1533000" />
+      <workItem from="1572014993449" duration="4374000" />
+      <workItem from="1572071831850" duration="8681000" />
+      <workItem from="1572334042429" duration="6838000" />
+      <workItem from="1572357973496" duration="660000" />
+      <workItem from="1572417685569" duration="5795000" />
+      <workItem from="1572437736815" duration="4633000" />
+      <workItem from="1572505759271" duration="3489000" />
+      <workItem from="1572595323662" duration="4179000" />
+      <workItem from="1572696349877" duration="1632000" />
+      <workItem from="1573037574759" duration="1175000" />
+      <workItem from="1573049623194" duration="3000" />
+      <workItem from="1573456774109" duration="5059000" />
+      <workItem from="1573799917174" duration="8255000" />
+      <workItem from="1573890787717" duration="1256000" />
+      <workItem from="1573973979047" duration="1746000" />
+      <workItem from="1574068323535" duration="759000" />
+      <workItem from="1574163166374" duration="1563000" />
+      <workItem from="1574237290227" duration="595000" />
+      <workItem from="1574323617515" duration="1483000" />
+      <workItem from="1574397067375" duration="2598000" />
+      <workItem from="1574582175248" duration="3021000" />
+      <workItem from="1574770314358" duration="4061000" />
+      <workItem from="1574841393745" duration="2955000" />
+      <workItem from="1575010688383" duration="3225000" />
+      <workItem from="1575099274693" duration="495000" />
+      <workItem from="1575192031537" duration="1535000" />
+      <workItem from="1575282549957" duration="3460000" />
+      <workItem from="1575375285514" duration="3428000" />
+      <workItem from="1575456000815" duration="3004000" />
+      <workItem from="1575544056478" duration="1115000" />
+      <workItem from="1575776207115" duration="9590000" />
+      <workItem from="1575939072943" duration="3192000" />
+      <workItem from="1576035819882" duration="403000" />
+      <workItem from="1576753057099" duration="3013000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="769486000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2727882" />
+      <window_info id="Structure" order="1" weight="0.14410187" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49396783" weight="0.16407356" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.42008486" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4953083" weight="0.38330975" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50603217" side_tool="true" weight="0.5884017" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.3281471" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2686883" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34265736" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5109948" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.20496224" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32879582" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test/Main.c</url>
+          <line>7</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/MergeSort/MergeSort2.h</url>
+          <line>53</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/MergeSort/Main.c</url>
+          <line>5</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SelectionSort/SimpleSelectionSort.c</url>
+          <line>12</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SelectionSort/SortHelper.h</url>
+          <line>19</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/InsertionSort/InsertionSort.c</url>
+          <line>44</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/InsertionSort/InsertionSort.c</url>
+          <line>28</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/InsertionSort/InsertionSort.c</url>
+          <line>41</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/Reverse Linked List2.c</url>
+          <line>56</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/wangdao/Pronlem11_2.c</url>
+          <line>56</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/Solution7.c</url>
+          <line>3</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/Solution7.c</url>
+          <line>21</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/Solution7.c</url>
+          <line>25</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/Solution14.c</url>
+          <line>29</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test/Tree.c</url>
+          <line>32</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test/Tree.c</url>
+          <line>33</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/BST/ThreadTree.c</url>
+          <line>125</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/BST/ThreadTree.c</url>
+          <line>126</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/Z.cpp</url>
+          <line>29</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/Z.cpp</url>
+          <line>28</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/T.c</url>
+          <line>39</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/T.c</url>
+          <line>42</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/Deletetree.cpp</url>
+          <line>74</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/Deletetree.cpp</url>
+          <line>75</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/PrintAncestors.cpp</url>
+          <line>221</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/PrintAncestors.cpp</url>
+          <line>226</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/PostBypre.c</url>
+          <line>31</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/PostBypre.c</url>
+          <line>33</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/LinkTreeLeaf.c</url>
+          <line>63</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Pratice/LinkTreeLeaf.c</url>
+          <line>61</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4.3.3Tree/07.Complete Binary Tree/isCompleteTree.cpp</url>
+          <line>58</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4.3.3Tree/07.Complete Binary Tree/isCompleteTree.cpp</url>
+          <line>59</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4.3.3Tree/20.InorderExpTree/Solution.cpp</url>
+          <line>13</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4.3.3Tree/20.InorderExpTree/Solution.cpp</url>
+          <line>39</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Sort/InsertSort/InsertionSort.cpp</url>
+          <line>5</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Stack/LinkedStack.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pratice/MaxWitdh.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkedList/16pattern/Solution.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="32" selection-start-line="32" selection-end-line="42" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkedList/16pattern/LinkedListHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="8" />
+          <folding>
+            <element signature="e#117#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkedList/23/LinkedListHelper.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LinkedList/23/Solution.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="11" selection-start-column="2" selection-end-line="44" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/14.maxWitdhOfTree/Solution_typeOne.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/19.WPL/solution.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/InsertSort/InsertionSort.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2136">
+          <caret line="89" column="2" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/19.WPL/Solution2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/14.maxWitdhOfTree/Solution_typeTwo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heap/MaxHeap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2784">
+          <caret line="116" column="19" selection-start-line="116" selection-start-column="19" selection-end-line="116" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/12.printAncestorNode/Solution1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="80" column="17" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/QuickSort/main.h" />
+    <entry file="file://$PROJECT_DIR$/Sort/QuickSort/SortHelp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pratice/postExpress.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/16.leftNodeToList/Solution1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/BubbleSort.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/SortHelp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2976">
+          <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+          <folding>
+            <element signature="e#62#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/Text.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="11" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/Ack.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="11" selection-start-column="2" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/zuiyouerchasuosoushu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/tuxiangyasuo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="19" column="7" selection-start-column="2" selection-end-line="94" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Test1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="38" column="37" selection-start-column="2" selection-end-line="46" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/stack.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="23" selection-start-column="2" selection-end-line="43" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/solution2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="34" column="3" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/shizihebing1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Matricx.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/loserTree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="26" column="7" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/HashTable.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="14" selection-start-column="2" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/f.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Closert.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2976">
+          <caret line="124" column="11" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/QuickSortTwoWays.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="54" column="3" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/Main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="25" selection-start-column="2" selection-end-line="61" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/T.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1608">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/text.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1704">
+          <caret line="71" selection-start-line="71" selection-end-line="74" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/QuickSort/QuickSortTwoWays.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1776">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/BFS_lingjiebiao.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5784">
+          <caret line="241" column="10" selection-start-column="2" selection-end-line="536" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/Kruskal.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/quanpailie.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="6" selection-start-column="2" selection-end-line="31" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/QuickSort/Main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="26" selection-start-column="2" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sort/QuickThreeWays.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Linkqueue.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1488">
+          <caret line="62" column="6" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/lingjiejuzhen.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/13.lowestCommonAncestor/Solution_Tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="52" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/13.lowestCommonAncestor/Solution_BST.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="39" selection-start-line="39" selection-end-line="54" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/15.fullTreePreToPost/Solution1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="70" lean-forward="true" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.3.3Tree/20.InorderExpTree/Solution.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="68" selection-start-line="68" selection-end-line="71" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Heap/HeapSort.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="41" lean-forward="true" selection-start-column="2" selection-end-line="64" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stack/Solution1.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stack/solution2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
